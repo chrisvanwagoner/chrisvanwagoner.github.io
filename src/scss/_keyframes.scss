@@ -1,5 +1,8 @@
 @keyframes fade-in{
-	// use on body when page loads
+	/* 
+	 * Used on <body> when page loads
+	 * providing a smoother load experience
+	 */
 	from {
 	  opacity: 0;
 	}
