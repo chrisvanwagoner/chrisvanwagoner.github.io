@@ -152,6 +152,35 @@ ul {
   list-style: none;
 }
 
+a {
+  @extend %link;
+}
+
+/***********************************
+  Nav
+***********************************/
+nav {
+  margin-bottom: $lh;
+  
+  @media #{$min-1000} {
+    margin-bottom: 0;
+  }
+  
+  ul {
+    display: flex;
+    // flex-direction: column;
+    justify-content: center;
+    flex-direction: row;
+    
+  }
+  li {
+    padding: 8px;
+  }
+  a {
+    font-size: 16px;
+    // color: #574D5B;
+  }
+}
 /***********************************
   Header
 ***********************************/
@@ -236,7 +265,6 @@ header {
 		}
 
 		a {
-			@extend %link;
 			font-size: $fs;
 		}
 	}
@@ -308,7 +336,6 @@ main {
 
   .client__name {
     @extend %heading;
-    @extend %link;
     display: inline-block;
     font-size: 5vw;
     font-weight: 200;
@@ -372,10 +399,6 @@ footer {
       margin-bottom: $lh;
     }
 
-  }
-
-  a {
-    @extend %link;
   }
 
   p {
