@@ -8,3 +8,4 @@ Disallow: /image-sizes.txt
 Disallow: /package.json
 Disallow: /package-lock.json
 Disallow: /images-unused
+Disallow: /fonts-unused
