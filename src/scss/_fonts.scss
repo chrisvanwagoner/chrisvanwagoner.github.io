@@ -11,23 +11,24 @@
 // 		//  url('../fonts/dm-serif-display-v3-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
 // 		//  url('../fonts/dm-serif-display-v3-latin-regular.svg#DMSerifDisplay') format('svg'); /* Legacy iOS */
 //   }
-  
+
 /* dm-serif-display-italic - latin */
 @font-face {
-	font-family: 'DM Serif Display';
-	font-style: italic;
-	font-weight: 400;
-	// font-display: optional;
-	font-display: swap;
-	// src: url('../fonts/dm-serif-display-v3-latin-italic.eot'); /* IE9 Compat Modes */
-	src: local('DM Serif Display Italic'), local('DMSerifDisplay-Italic'),
-		//  url('../fonts/dm-serif-display-v3-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-		 url('../fonts/dm-serif-display-v3-latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
-		 url('../fonts/dm-serif-display-v3-latin-italic.woff') format('woff'), /* Modern Browsers */
-		//  url('../fonts/dm-serif-display-v3-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
-		//  url('../fonts/dm-serif-display-v3-latin-italic.svg#DMSerifDisplay') format('svg'); /* Legacy iOS */
-  }
-  
+    font-family: "DM Serif Display";
+    font-style: italic;
+    font-weight: 400;
+    // font-display: optional;
+    font-display: swap;
+    // src: url('../fonts/dm-serif-display-v3-latin-italic.eot'); /* IE9 Compat Modes */
+    src: local("DM Serif Display Italic"), local("DMSerifDisplay-Italic"),
+        //  url('../fonts/dm-serif-display-v3-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url("../fonts/dm-serif-display-v3-latin-italic.woff2") format("woff2"),
+        /* Super Modern Browsers */
+            url("../fonts/dm-serif-display-v3-latin-italic.woff") format("woff"); /* Modern Browsers */
+    //  url('../fonts/dm-serif-display-v3-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+    //  url('../fonts/dm-serif-display-v3-latin-italic.svg#DMSerifDisplay') format('svg'); /* Legacy iOS */
+}
+
 // @font-face {
 // 	font-family: 'Inter';
 // 	font-style:  normal;
@@ -38,30 +39,33 @@
 // 		 url("Inter-Thin.woff") format("woff");
 //   }
 
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 200;
+    // font-display: optional;
+    font-display: swap;
+    src: url("../fonts/Inter-ExtraLight-BETA.woff2") format("woff2"),
+        url("../fonts/Inter-ExtraLight-BETA.woff") format("woff");
+}
+
+// @font-face {
+// 	font-family: 'Inter';
+// 	font-style: italic;
+// 	font-weight: 200;
+// 	// font-display: optional;
+// 	font-display: swap;
+// 	src: url("../fonts/Inter-ExtraLightItalic-BETA.woff2") format("woff2"), url("../fonts/Inter-ExtraLightItalic-BETA.woff") format("woff"); }
 
 @font-face {
-	font-family: 'Inter';
-	font-style: normal;
-	font-weight: 200;
-	// font-display: optional;
-	font-display: swap;
-	src: url("../fonts/Inter-ExtraLight-BETA.woff2") format("woff2"), url("../fonts/Inter-ExtraLight-BETA.woff") format("woff"); }
-
-@font-face {
-	font-family: 'Inter';
-	font-style: italic;
-	font-weight: 200;
-	// font-display: optional;
-	font-display: swap;
-	src: url("../fonts/Inter-ExtraLightItalic-BETA.woff2") format("woff2"), url("../fonts/Inter-ExtraLightItalic-BETA.woff") format("woff"); }
-
-@font-face {
-	font-family: 'Inter';
-	font-style: normal;
-	font-weight: 300;
-font-display: optional;
-font-display: swap;
-	src: url("../fonts/Inter-Light-BETA.woff2") format("woff2"), url("../fonts/Inter-Light-BETA.woff") format("woff"); }
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 300;
+    // font-display: optional;
+    font-display: swap;
+    src: url("../fonts/Inter-Light-BETA.woff2") format("woff2"),
+        url("../fonts/Inter-Light-BETA.woff") format("woff");
+}
 
 // @font-face {
 // 	font-family: 'Inter';
@@ -72,12 +76,14 @@ font-display: swap;
 // 	src: url("../fonts/Inter-LightItalic-BETA.woff2") format("woff2"), url("../fonts/Inter-LightItalic-BETA.woff") format("woff"); }
 
 @font-face {
-	font-family: 'Inter';
-	font-style: normal;
-	font-weight: 400;
-font-display: optional;
-font-display: swap;
-	src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff"); }
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    // font-display: optional;
+    font-display: swap;
+    src: url("../fonts/Inter-Regular.woff2") format("woff2"),
+        url("../fonts/Inter-Regular.woff") format("woff");
+}
 
 // @font-face {
 // 	font-family: 'Inter';
@@ -166,8 +172,8 @@ font-display: swap;
 // 	// font-display: optional;
 // 	font-display: swap;
 // 	src: url("../fonts/Inter-BlackItalic.woff2") format("woff2"), url("../fonts/Inter-BlackItalic.woff") format("woff"); }
-  
-  /* -------------------------------------------------------
+
+/* -------------------------------------------------------
   Variable font.
   Usage:
   
@@ -176,21 +182,21 @@ font-display: swap;
 	  html { font-family: 'Inter var', sans-serif; }
 	}
   */
-  @font-face {
-	font-family: 'Inter var';
-	font-weight: 100 900;
-	// font-display: optional;
-	font-display: swap;
-	// font-style: normal;
-	font-style: oblique 0deg 10deg;
-	font-named-instance: 'Regular';
-	src: url("../fonts/Inter.var.woff2") format("woff2");
-  }
+@font-face {
+    font-family: "Inter var";
+    font-weight: 100 900;
+    // font-display: optional;
+    font-display: swap;
+    // font-style: normal;
+    font-style: oblique 0deg 10deg;
+    font-named-instance: "Regular";
+    src: url("../fonts/Inter.var.woff2") format("woff2");
+}
 //   @font-face {
 // 	font-family: 'Jost';
 // 	font-weight: 100 900;
 // font-display: optional;
-	// font-display: swap;
+// font-display: swap;
 // 	font-style: normal;
 // 	font-named-instance: 'Regular';
 // 	src: url("../fonts/Jost-VF.ttf") format("ttf supports variations(gvar)");
@@ -206,9 +212,8 @@ font-display: swap;
 // 		 url("Inter-italic.var.woff2") format("woff2-variations"),
 // 		 url("Inter-italic.var.woff2") format("woff2");
 //   }
-  
-  
-  /* --------------------------------------------------------------------------
+
+/* --------------------------------------------------------------------------
   [EXPERIMENTAL] Multi-axis, single variable font.
   
   Slant axis is not yet widely supported (as of February 2019) and thus this
@@ -230,4 +235,3 @@ font-display: swap;
 // 	src: url("Inter.var.woff2") format("woff2-variations"),
 // 		 url("Inter.var.woff2") format("woff2");
 //   }
-  
