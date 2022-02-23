@@ -147,6 +147,7 @@ function build() {
       "src/images/**",
       "src/fonts/**",
       "src/humans.txt",
+      "src/site.webmanifest",
       "src/robots.txt"
     ], { base: './src' })
     .pipe(gulp.dest('./dist'));
