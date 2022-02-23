@@ -4,39 +4,31 @@ main.scss
 /* dm-serif-display-regular - latin */
 /* dm-serif-display-italic - latin */
 @font-face {
-  font-family: 'DM Serif Display';
+  font-family: "DM Serif Display";
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: local("DM Serif Display Italic"), local("DMSerifDisplay-Italic"), url("../fonts/dm-serif-display-v3-latin-italic.woff2") format("woff2"), url("../fonts/dm-serif-display-v3-latin-italic.woff") format("woff"); }
+  src: local("DM Serif Display Italic"), local("DMSerifDisplay-Italic"), url("../fonts/dm-serif-display-v3-latin-italic.woff2") format("woff2"), url("../fonts/dm-serif-display-v3-latin-italic.woff") format("woff");
+  /* Modern Browsers */ }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 200;
   font-display: swap;
   src: url("../fonts/Inter-ExtraLight-BETA.woff2") format("woff2"), url("../fonts/Inter-ExtraLight-BETA.woff") format("woff"); }
 
 @font-face {
-  font-family: 'Inter';
-  font-style: italic;
-  font-weight: 200;
-  font-display: swap;
-  src: url("../fonts/Inter-ExtraLightItalic-BETA.woff2") format("woff2"), url("../fonts/Inter-ExtraLightItalic-BETA.woff") format("woff"); }
-
-@font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 300;
-  font-display: optional;
   font-display: swap;
   src: url("../fonts/Inter-Light-BETA.woff2") format("woff2"), url("../fonts/Inter-Light-BETA.woff") format("woff"); }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-display: optional;
   font-display: swap;
   src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff"); }
 
@@ -50,11 +42,11 @@ main.scss
 	}
   */
 @font-face {
-  font-family: 'Inter var';
+  font-family: "Inter var";
   font-weight: 100 900;
   font-display: swap;
   font-style: oblique 0deg 10deg;
-  font-named-instance: 'Regular';
+  font-named-instance: "Regular";
   src: url("../fonts/Inter.var.woff2") format("woff2"); }
 
 /* --------------------------------------------------------------------------
@@ -357,7 +349,7 @@ header {
     @media screen and (min-width: 1000px) {
       header .header__name {
         grid-column: 8 / 12;
-        grid-row: 5 / 6;
+        grid-row: 7 / 8;
         margin-bottom: 0; } }
   header .header__figure {
     grid-column: 2 / 10 span;
@@ -404,7 +396,7 @@ header {
     @media screen and (min-width: 1000px) {
       header .header__bio {
         grid-column: 8 / 12;
-        grid-row: 6 / 12; } }
+        grid-row: 8 / 12; } }
     header .header__bio p {
       position: relative; }
     header .header__bio a {
@@ -463,8 +455,13 @@ main {
       main .client__name {
         font-size: 4vw;
         line-height: 1.2; } }
-    @media screen and (min-width: 1000px) {
+    @media screen and (min-width: 1200px) {
       main .client__name {
+        font-size: 5vw;
+        letter-spacing: -3px; } }
+    @media screen and (min-width: 1600px) {
+      main .client__name {
+        font-size: 90px;
         letter-spacing: -3px; } }
     main .client__name:before, main .client__name:after {
       bottom: 4px; }
