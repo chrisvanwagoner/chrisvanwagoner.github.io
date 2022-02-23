@@ -41,14 +41,6 @@ main.scss
 	  html { font-family: 'Inter var', sans-serif; }
 	}
   */
-@font-face {
-  font-family: "Inter var";
-  font-weight: 100 900;
-  font-display: swap;
-  font-style: oblique 0deg 10deg;
-  font-named-instance: "Regular";
-  src: url("../fonts/Inter.var.woff2") format("woff2"); }
-
 /* --------------------------------------------------------------------------
   [EXPERIMENTAL] Multi-axis, single variable font.
   
@@ -253,10 +245,6 @@ html {
   @media screen and (min-width: 800px) {
     html {
       font-size: 20px; } }
-
-@supports (font-variation-settings: normal) {
-  html {
-    font-family: 'Inter var', sans-serif; } }
 
 body {
   -webkit-animation: 1500ms fade-in;
