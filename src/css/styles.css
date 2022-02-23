@@ -147,7 +147,7 @@ small {
     small {
       font-weight: 200; } }
 
-header .header__bio a, main .client__name, footer a {
+a {
   font-size: 1rem;
   font-weight: 400;
   font-variation-settings: "wght" 400;
@@ -157,28 +157,28 @@ header .header__bio a, main .client__name, footer a {
   position: relative;
   text-decoration: none;
   overflow: hidden; }
-  header .header__bio a:before, main .client__name:before, footer a:before, header .header__bio a:after, main .client__name:after, footer a:after {
+  a:before, a:after {
     content: "";
     position: absolute;
     bottom: 0;
     left: 0;
     height: 1px;
     z-index: -1; }
-  header .header__bio a:before, main .client__name:before, footer a:before {
+  a:before {
     background-color: #bbab57;
     width: 100%; }
-  header .header__bio a:after, main .client__name:after, footer a:after {
+  a:after {
     background-color: var(--hover);
     -webkit-transition: width 0.3s ease-in-out;
     transition: width 0.3s ease-in-out;
     width: 0; }
-  header .header__bio a:hover, main .client__name:hover, footer a:hover, header .header__bio a:focus, main .client__name:focus, footer a:focus {
+  a:hover {
     color: var(--hover); }
-    header .header__bio a:hover:after, main .client__name:hover:after, footer a:hover:after, header .header__bio a:focus:after, main .client__name:focus:after, footer a:focus:after {
+    a:hover:after {
       background-color: var(--hover);
       width: 100%; }
     @media (prefers-color-scheme: dark) {
-      header .header__bio a:hover, main .client__name:hover, footer a:hover, header .header__bio a:focus, main .client__name:focus, footer a:focus {
+      a:hover {
         color: #fff; } }
 
 main {
@@ -320,6 +320,30 @@ a {
 
 ul {
   list-style: none; }
+
+/***********************************
+  Nav
+***********************************/
+nav {
+  margin-bottom: 1.3rem; }
+  @media screen and (min-width: 1000px) {
+    nav {
+      margin-bottom: 0; } }
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+  nav li {
+    padding: 8px; }
+  nav a {
+    font-size: 16px; }
 
 /***********************************
   Header
