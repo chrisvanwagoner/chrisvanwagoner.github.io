@@ -33,9 +33,9 @@ html {
 
 }
 
-@supports (font-variation-settings: normal) {
-  html { font-family: 'Inter var', sans-serif; }
-}
+// @supports (font-variation-settings: normal) {
+//   html { font-family: 'Inter var', sans-serif; }
+// }
 
 body {
   animation: 1500ms fade-in;
