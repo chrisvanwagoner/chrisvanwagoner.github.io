@@ -34,7 +34,7 @@ html {
 }
 
 body {
-  --hover: $green;
+  --hover: #00584b;
   animation: 1500ms fade-in;
 	background-color: $bg;
 	font-family: 'Inter var', 'Inter', sans-serif;
@@ -174,7 +174,9 @@ nav {
   }
 
   a {
+    display: inline-block;
     font-size: 16px;
+    line-height: 24px;
   }
 }
 
