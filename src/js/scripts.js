@@ -368,3 +368,26 @@ const setColorScheme = (e) => {
 
 setColorScheme(colorSchemeQueryList);
 colorSchemeQueryList.addEventListener(setColorScheme, null);
+
+
+let focusable =  document.querySelectorAll('a, button');
+focusable.forEach((el) => {
+	el.addEventListener('mousedown', (event) => {
+		if (event.target.classList.contains('has-focus')) {
+			event.target.classList.remove('has-focus');
+		}
+	});
+	el.addEventListener('click', (event) => {
+		if (event.target.classList.contains('has-focus')) {
+			event.target.classList.remove('has-focus');
+		}
+	});
+	el.addEventListener('keyup', (event) => {
+		if (event.target.classList.contains('has-focus')) {
+			event.target.classList.remove('has-focus');
+		}
+		if (event.keyCode == '9') {
+			event.target.classList.add('has-focus');
+		}
+	});
+});
