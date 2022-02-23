@@ -26,17 +26,19 @@ main.scss
 
 @font-face {
   font-family: 'Inter';
-  font-style: italic;
-  font-weight: 700;
+  font-style: normal;
+  font-weight: 300;
+  font-display: optional;
   font-display: swap;
-  src: url("../fonts/Inter-BoldItalic.woff2") format("woff2"), url("../fonts/Inter-BoldItalic.woff") format("woff"); }
+  src: url("../fonts/Inter-Light-BETA.woff2") format("woff2"), url("../fonts/Inter-Light-BETA.woff") format("woff"); }
 
 @font-face {
   font-family: 'Inter';
-  font-style: italic;
-  font-weight: 900;
+  font-style: normal;
+  font-weight: 400;
+  font-display: optional;
   font-display: swap;
-  src: url("../fonts/Inter-BlackItalic.woff2") format("woff2"), url("../fonts/Inter-BlackItalic.woff") format("woff"); }
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff"); }
 
 /* -------------------------------------------------------
   Variable font.
@@ -75,30 +77,29 @@ SASS Variables
 main .client__name {
   font-family: inherit;
   font-weight: 400;
-  font-variation-settings: 'wght' 400; }
+  font-variation-settings: "wght" 400; }
 
 small {
   font-family: inherit;
   font-weight: 700;
-  font-variation-settings: 'wght' 700; }
+  font-variation-settings: "wght" 700; }
 
 h1, h2, h3,
 .h3-like, h4 {
-  font-family: 'DM Serif Display', serif;
+  font-family: "DM Serif Display", serif;
   font-weight: 400;
   font-style: italic; }
 
 p {
   font-style: normal;
   font-weight: 300;
-  font-variation-settings: 'wght' 300; }
+  font-variation-settings: "wght" 300; }
 
 h1 {
   color: inherit;
   font-size: 1.6rem;
   letter-spacing: -1px;
-  line-height: 2.08rem;
-  margin-bottom: 2.6rem; }
+  line-height: 2.08rem; }
   @media screen and (min-width: 400px) {
     h1 {
       font-size: 2rem;
@@ -115,12 +116,10 @@ h2 {
   font-size: 16vw;
   letter-spacing: -0.7vw;
   line-height: 0.8;
-  text-transform: uppercase;
-  margin-bottom: 5.2rem; }
+  text-transform: uppercase; }
   @media screen and (min-width: 800px) {
     h2 {
-      font-size: 18vw;
-      margin-bottom: 2.6rem; } }
+      font-size: 18vw; } }
   @media screen and (min-width: 1000px) {
     h2 {
       font-size: 18vw;
@@ -134,20 +133,11 @@ h3,
   color: inherit;
   font-size: 1.4rem;
   letter-spacing: 0px;
-  line-height: 2.08rem;
-  margin-bottom: 1.3rem; }
+  line-height: 1; }
   @media screen and (min-width: 800px) {
     h3,
     .h3-like {
       font-size: 1.8rem; } }
-  @media screen and (min-width: 1000px) {
-    h3,
-    .h3-like {
-      line-height: 2.6rem; } }
-  @media screen and (min-width: 1200px) {
-    h3,
-    .h3-like {
-      line-height: 3.12rem; } }
 
 h4 {
   font-style: italic;
@@ -176,7 +166,7 @@ small {
 header .header__bio a, main .client__name, footer a {
   font-size: 1rem;
   font-weight: 400;
-  font-variation-settings: 'wght' 400;
+  font-variation-settings: "wght" 400;
   color: inherit;
   -webkit-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out;
@@ -194,20 +184,20 @@ header .header__bio a, main .client__name, footer a {
     background-color: #bbab57;
     width: 100%; }
   header .header__bio a:after, main .client__name:after, footer a:after {
-    background-color: #00584b;
+    background-color: var(--hover);
     -webkit-transition: width 0.3s ease-in-out;
     transition: width 0.3s ease-in-out;
     width: 0; }
   header .header__bio a:hover, main .client__name:hover, footer a:hover, header .header__bio a:focus, main .client__name:focus, footer a:focus {
-    color: #00584b; }
+    color: var(--hover); }
     header .header__bio a:hover:after, main .client__name:hover:after, footer a:hover:after, header .header__bio a:focus:after, main .client__name:focus:after, footer a:focus:after {
-      background-color: #00584b;
+      background-color: var(--hover);
       width: 100%; }
     @media (prefers-color-scheme: dark) {
       header .header__bio a:hover, main .client__name:hover, footer a:hover, header .header__bio a:focus, main .client__name:focus, footer a:focus {
-        color: #FFF; } }
+        color: #fff; } }
 
-main, footer {
+main {
   display: grid;
   grid-template-columns: repeat(12, 1fr); }
 
@@ -264,12 +254,17 @@ html {
   -ms-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-size: 16px;
   cursor: default;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
   scroll-behavior: smooth; }
   @media screen and (min-width: 800px) {
     html {
       font-size: 20px; } }
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: 'Inter var', sans-serif; } }
 
 body {
   -webkit-animation: 1500ms fade-in;
@@ -280,12 +275,12 @@ body {
   font-smoothing: antialiased;
   font-weight: 300;
   font-variation-settings: "wght" 300;
-  color: #19181D;
+  color: #19181d;
   max-width: 1560px;
-  padding-right: 1.3rem;
-  padding-left: 1.3rem;
+  padding: 1.3rem;
   -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out; }
+  transition: all 0.2s ease-in-out;
+  --hover: #00584b; }
   @media screen and (min-width: 800px) {
     body {
       margin-right: auto;
@@ -294,8 +289,8 @@ body {
     height: 24px;
     width: 24px;
     position: absolute;
-    right: 5px;
-    top: 5px;
+    right: 1.3rem;
+    top: 1.3rem;
     background-color: inherit;
     opacity: 0.7;
     border-radius: 40px;
@@ -303,13 +298,14 @@ body {
     background-position: 0% 0%;
     background-size: contain;
     background-repeat: no-repeat;
-    border: 1px solid #19181D;
+    border: 1px solid #19181d;
     border: 0;
-    color: #19181D;
+    color: #19181d;
     background-image: url(../images/sun.svg); }
   body.dark-mode {
     color: #CACACA;
-    background-color: #191c1b; }
+    background-color: #191c1b;
+    --hover: #fff; }
     body.dark-mode img {
       -webkit-filter: brightness(0.7);
               filter: brightness(0.7); }
@@ -320,14 +316,16 @@ body {
       color: #f6f4f3;
       background-image: url(../images/moon.svg); }
   @media (prefers-color-scheme: dark) {
-    body:not(.light-mode) {
-      color: #CACACA;
-      background-color: #191c1b; }
-      body:not(.light-mode) img {
-        -webkit-filter: brightness(0.7);
-                filter: brightness(0.7); }
-      body:not(.light-mode) path {
-        stroke: #CACACA; } }
+    body {
+      --hover: #fff; }
+      body:not(.light-mode) {
+        color: #CACACA;
+        background-color: #191c1b; }
+        body:not(.light-mode) img {
+          -webkit-filter: brightness(0.7);
+                  filter: brightness(0.7); }
+        body:not(.light-mode) path {
+          stroke: #CACACA; } }
 
 h1,
 h2,
@@ -347,28 +345,26 @@ ul {
   Header
 ***********************************/
 header {
-  height: 80vh;
-  margin-bottom: 5.2rem;
-  overflow: hidden;
-  padding-top: 1.3rem;
-  padding-bottom: 1.3rem; }
-  @media screen and (min-width: 600px) {
-    header {
-      height: auto; } }
+  margin-bottom: 10.4rem;
+  overflow: hidden; }
   @media screen and (min-width: 1000px) {
     header {
-      margin-bottom: 10vw;
-      min-height: 700px; } }
-  @media screen and (min-width: 1200px) {
-    header {
-      height: 100vh; } }
+      height: 90vh; } }
+  header .header__name {
+    grid-column: 1 / -1;
+    position: relative;
+    margin-bottom: 2.6rem; }
+    @media screen and (min-width: 1000px) {
+      header .header__name {
+        grid-column: 8 / 12;
+        grid-row: 5 / 6;
+        margin-bottom: 0; } }
   header .header__figure {
-    grid-column: 2 / 12;
+    grid-column: 2 / 10 span;
     grid-row: 2 / 3;
     margin-bottom: 60px;
     margin-left: auto;
-    margin-right: auto;
-    display: none; }
+    margin-right: auto; }
     @media screen and (min-width: 1000px) {
       header .header__figure {
         border-radius: 0;
@@ -377,8 +373,8 @@ header {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        grid-column: 1 / 7 span;
-        grid-row: 1 / 12 span;
+        grid-column: 1 / 6 span;
+        grid-row: 2 / 10 span;
         height: 100%;
         -webkit-box-pack: center;
             -ms-flex-pack: center;
@@ -401,22 +397,14 @@ header {
           -webkit-transform: translate(var(--left));
                   transform: translate(var(--left));
           width: 100%; } }
-  header .header__name {
-    grid-column: 1 / -1;
-    position: relative; }
-    @media screen and (min-width: 1000px) {
-      header .header__name {
-        grid-column: 9 / 12;
-        grid-row: 1 / 3; } }
   header .header__bio {
     grid-column: 1 / -1;
-    grid-row: 3 / 12;
+    grid-row: 7 / 12;
     position: relative; }
     @media screen and (min-width: 1000px) {
       header .header__bio {
-        grid-column: 9 / 12;
-        grid-row: 6 / 12;
-        opacity: calc(var(--opacity) - 0.6); } }
+        grid-column: 8 / 12;
+        grid-row: 6 / 12; } }
     header .header__bio p {
       position: relative; }
     header .header__bio a {
@@ -436,75 +424,48 @@ header {
     header .fade-right {
       right: var(--left); } }
 
-#preview {
-  --x: 0;
-  --y: 0;
-  background-color: #00584b;
-  background-size: cover;
-  opacity: 0;
-  position: absolute;
-  -webkit-transition: opacity 250ms ease-in-out;
-  transition: opacity 250ms ease-in-out;
-  z-index: -1; }
-  @media screen and (min-width: 800px) {
-    #preview {
-      top: var(--y);
-      left: var(--x);
-      height: 500px;
-      width: 500px; } }
-
 /***********************************
   Main
 ***********************************/
 main {
-  margin-bottom: 5.2rem;
+  margin-bottom: 10.4rem;
   overflow: hidden;
   padding-bottom: 1.3rem; }
   main .main__title {
     grid-column: 1 / -1;
-    padding-bottom: 1.3rem;
-    position: relative;
-    z-index: -2; }
+    margin-bottom: 5.2rem;
+    position: relative; }
     @media screen and (min-width: 1000px) {
       main .main__title {
         grid-column: 1 / 12 span;
         margin-bottom: 10vw; } }
-  main .title-decoration {
-    position: absolute;
-    bottom: -30px;
-    left: 250px;
-    opacity: 0.5;
-    z-index: -1; }
-    @media screen and (max-width: 600px) {
-      main .title-decoration {
-        display: none; } }
   main .main__clients {
     grid-column: 1 / -1; }
   main .client {
-    padding-bottom: 1.7vh;
     position: relative;
     overflow: hidden;
     text-align: right; }
+    main .client:not(:last-child) {
+      margin-bottom: 1.7vh; }
     @media screen and (min-width: 1000px) {
       main .client {
         margin-right: 15px; } }
   main .client__name {
-    --wght: 400;
-    --skew: 0;
-    --translateX: 0;
     display: inline-block;
     font-size: 5vw;
-    font-variation-settings: "wght" var(--wght);
+    font-weight: 200;
+    font-variation-settings: 'wght' 200;
     letter-spacing: -0.01vw;
     line-height: 1.2;
-    padding-bottom: 0.8vw;
     -webkit-transition: all 100ms ease-out;
-    transition: all 100ms ease-out;
-    -webkit-transform: skew(var(--skew), 0) translateX(var(--translateX));
-            transform: skew(var(--skew), 0) translateX(var(--translateX)); }
+    transition: all 100ms ease-out; }
+    @media screen and (min-width: 800px) {
+      main .client__name {
+        font-size: 4vw;
+        line-height: 1.2; } }
     @media screen and (min-width: 1000px) {
       main .client__name {
-        --wght: 100; } }
+        letter-spacing: -3px; } }
     main .client__name:before, main .client__name:after {
       bottom: 4px; }
       @media screen and (min-width: 800px) {
@@ -515,39 +476,17 @@ main {
           bottom: 10px; } }
     main .client__name span {
       overflow: hidden; }
-    @media screen and (min-width: 800px) {
-      main .client__name {
-        font-size: 4vw;
-        line-height: 0.9; } }
-    @media screen and (min-width: 1000px) {
-      main .client__name {
-        font-size: 60px;
-        letter-spacing: -3px; } }
 
 /***********************************
 Footer
 ***********************************/
 footer {
   display: block;
-  margin-bottom: 10vw;
-  min-height: 30%;
-  min-height: 30vh;
-  overflow: hidden;
-  padding-bottom: 16px; }
-  footer .contact {
-    grid-column: 2 / 12; }
+  margin-bottom: 10.4rem; }
   footer h2 {
-    position: relative; }
-  footer .title-decoration {
-    position: absolute;
-    top: -38px;
-    left: 185px;
-    opacity: 0.5; }
-    @media screen and (max-width: 600px) {
-      footer .title-decoration {
-        display: none; } }
-  footer li:not(:first-child) {
-    margin-top: 18px; }
-  footer li:last-child {
-    font-style: italic;
-    margin-top: 36px; }
+    position: relative;
+    margin-bottom: 2.6rem; }
+  footer li:not(:last-child) {
+    margin-bottom: 1.3rem; }
+  footer p {
+    margin-top: 2.6rem; }

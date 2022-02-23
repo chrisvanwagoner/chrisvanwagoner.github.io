@@ -3,212 +3,216 @@ _variables.scss
 SASS Variables
 ***********************************/
 
-$blue: #0005EC;
+$blue: #0005ec;
 // $green: #167568;
 $green: #00584b;
 // $heading: #19181D;
 // $bg: #F4F0EC;
 $bg: #f6f4f3;
 // $bg: #FFF;
-$text: #19181D;
+$text: #19181d;
 // $text: #24130C;
 // $link-underline: #CACACA;
-$link-underline: #bbab57;
+$gold: #bbab57;
+
+$link-underline: $gold;
 $link-hover: $green;
 
 $fs: 1rem; // 20px
 $lh: $fs + ($fs * 0.3); // 26px
-$spacer: $lh * 2; 
+$spacer: $lh * 2;
 
-$min-400:  "screen and (min-width: 400px)";
-$max-600:  "screen and (max-width: 600px)";
-$min-600:  "screen and (min-width: 600px)";
-$max-800:  "screen and (max-width: 800px)";
-$min-800:  "screen and (min-width: 800px)";
+$min-400: "screen and (min-width: 400px)";
+$max-600: "screen and (max-width: 600px)";
+$min-600: "screen and (min-width: 600px)";
+$max-800: "screen and (max-width: 800px)";
+$min-800: "screen and (min-width: 800px)";
 $max-1000: "screen and (max-width: 1000px)";
 $min-1000: "screen and (min-width: 1000px)";
 $min-1200: "screen and (min-width: 1200px)";
 $min-1400: "screen and (min-width: 1400px)";
 $min-1600: "screen and (min-width: 1600px)";
 
-
 %headingExtraLight {
-	font-family: inherit;
-	font-weight: 200;
-	font-variation-settings: 'wght' 200;
+    font-family: inherit;
+    font-weight: 200;
+    font-variation-settings: "wght" 200;
 }
+
 %heading {
-	font-family: inherit;
-	font-weight: 400;
-	font-variation-settings: 'wght' 400;
+    font-family: inherit;
+    font-weight: 400;
+    font-variation-settings: "wght" 400;
 }
+
 %headingBold {
-	font-family: inherit;
-	font-weight: 700;
-	font-variation-settings: 'wght' 700;
+    font-family: inherit;
+    font-weight: 700;
+    font-variation-settings: "wght" 700;
 }
+
 %headingBlack {
-	font-family: inherit;
-	font-weight: 900;
-	font-variation-settings: 'wght' 900;
+    font-family: inherit;
+    font-weight: 900;
+    font-variation-settings: "wght" 900;
 }
 
 %headingSerif {
-	font-family: 'DM Serif Display', serif;
-	font-weight: 400;
-	font-style: italic;
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: italic;
 }
+
 %text {
-	font-style:  normal;
-	font-weight: 300;
-	font-variation-settings: 'wght' 300;
+    font-style: normal;
+    font-weight: 300;
+    font-variation-settings: "wght" 300;
 }
+
 %h1 {
-	@extend %headingSerif;
-	color: inherit;
-	font-size: 1.6rem;
-	letter-spacing: -1px;
-	line-height: $lh * 1.6;
-	margin-bottom: $lh * 2;
-	@media #{$min-400} {
-		font-size: 2rem;
-		line-height: $lh * 2;
-	}
-	@media #{$min-1000} {
-		font-size: 1.2rem;
-		letter-spacing: 0.6px;
-		line-height: $lh;
-	}
+    @extend %headingSerif;
+    color: inherit;
+    font-size: 1.6rem;
+    letter-spacing: -1px;
+    line-height: $lh * 1.6;
+    // margin-bottom: $lh * 2;
+    @media #{$min-400} {
+        font-size: 2rem;
+        line-height: $lh * 2;
+    }
+    @media #{$min-1000} {
+        font-size: 1.2rem;
+        letter-spacing: 0.6px;
+        line-height: $lh;
+    }
 }
+
 %h2 {
-	@extend %headingSerif;
-	font-style: italic;
-	color: inherit;
-	font-size: 16vw;
-	letter-spacing: -0.7vw;
-	line-height: 0.8;
-	text-transform: uppercase;  
-	margin-bottom: $lh * 4;
-	@media #{$min-800} {
-		font-size: 18vw;
-		margin-bottom: $lh * 2;  
-	}
+    @extend %headingSerif;
+    font-style: italic;
+    color: inherit;
+    font-size: 16vw;
+    letter-spacing: -0.7vw;
+    line-height: 0.8;
+    text-transform: uppercase;
+
+    @media #{$min-800} {
+        font-size: 18vw;
+    }
+   
 	@media #{$min-1000} {
 		font-size: 18vw;
 		letter-spacing: -0.5vw;
 	}
+   
 	@media #{$min-1200} {
-		font-size: 200px;
-	}
+        font-size: 200px;
+    }
 }
+
 %h3 {
-	@extend %headingSerif;
-	color: inherit;
-	font-size: 1.4rem;
-	letter-spacing: 0px;
-	line-height: $lh * 1.6;
-	margin-bottom: $lh;
-	@media #{$min-800} {
-		font-size: 1.8rem;
-	}
-	@media #{$min-1000} {
+    @extend %headingSerif;
+    color: inherit;
+    font-size: 1.4rem;
+    letter-spacing: 0px;
+    line-height: 1;
+    @media #{$min-800} {
+        font-size: 1.8rem;
+    }
+    @media #{$min-1000} {
         // font-size: 2rem;
-		line-height: $lh * 2;
-	}
+    }
     @media #{$min-1200} {
         // font-size: 3rem;
-        line-height: $lh * 2.4;
     }
 }
 %h4 {
-	@extend %headingSerif;
-	font-style: italic;
-	color: inherit;
-	font-size: 1rem;
-	letter-spacing: 0.57px;
-	line-height: 1rem;
+    @extend %headingSerif;
+    font-style: italic;
+    color: inherit;
+    font-size: 1rem;
+    letter-spacing: 0.57px;
+    line-height: 1rem;
 }
 %paragraph {
-	@extend %text;
-	color: inherit;
-	font-size: 1rem;
-	letter-spacing: -0.3px;
-	line-height: $lh;
+    @extend %text;
+    color: inherit;
+    font-size: 1rem;
+    letter-spacing: -0.3px;
+    line-height: $lh;
 }
 %small {
-	@extend %headingBold;
-	font-style: italic;
-	color: inherit;
-	font-size: 0.7rem;
-	letter-spacing: 0;
-	line-height: $lh;
-	margin-bottom: $lh * 0.2;
-	@media #{$min-1200} {
-		font-weight: 200;
-	}
+    @extend %headingBold;
+    font-style: italic;
+    color: inherit;
+    font-size: 0.7rem;
+    letter-spacing: 0;
+    line-height: $lh;
+    margin-bottom: $lh * 0.2;
+    @media #{$min-1200} {
+        font-weight: 200;
+    }
 }
 %link {
-	font-size: $fs;
-	font-weight: 400;
-	font-variation-settings: 'wght' 400;
-	color: inherit;
-	transition: color 0.2s ease-in-out;
-	position: relative;
-	text-decoration: none;
-	overflow: hidden;
-	&:before,
-	&:after {
-		content: "";
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		height: 1px;
-		z-index: -1;
-	}
-	&:before {
-		background-color: $link-underline;
-		width: 100%;
-	}
-	&:after {
-		background-color: $link-hover;
-		transition: width 0.3s ease-in-out;
-		width: 0;
-	}
-	&:hover,
-	&:focus {
-		color: $link-hover;
-		&:after {
-			background-color: $link-hover;
-			width: 100%;
-		}
-		@media (prefers-color-scheme: dark) {
-			color: #FFF;
-			
-		}
-	}
+    font-size: $fs;
+    font-weight: 400;
+    font-variation-settings: "wght" 400;
+    color: inherit;
+    transition: color 0.2s ease-in-out;
+    position: relative;
+    text-decoration: none;
+    overflow: hidden;
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 1px;
+        z-index: -1;
+    }
+    &:before {
+        background-color: $link-underline;
+        width: 100%;
+    }
+    &:after {
+        background-color: var(--hover);
+        transition: width 0.3s ease-in-out;
+        width: 0;
+    }
+    &:hover,
+    &:focus {
+        color: var(--hover);
+        &:after {
+            background-color: var(--hover);
+            width: 100%;
+        }
+        @media (prefers-color-scheme: dark) {
+            color: #fff;
+        }
+    }
 }
 
 %shadow {
-	box-shadow: 0 2px 30px 5px rgba(143, 142, 173, 0.7);
+    box-shadow: 0 2px 30px 5px rgba(143, 142, 173, 0.7);
 }
 %grid {
-	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-	// grid-column-gap: $lh;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    // grid-column-gap: $lh;
 }
 %grid-header {
-	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: auto 1fr auto;
-	grid-column-gap: $lh;
-	@media #{$min-1000} {
-		grid-template-rows: repeat(12, 1fr);
-	}
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto 1fr auto;
+    grid-column-gap: $lh;
+    @media #{$min-1000} {
+        grid-template-rows: repeat(12, 1fr);
+    }
 }
 
 .has-focus {
-	outline: 3px solid #c1e0fe;
-	outline: 3px solid rgba(131,192,253,.5);
-	outline-offset: 1px;
+    outline: 3px solid #c1e0fe;
+    outline: 3px solid rgba(131, 192, 253, 0.5);
+    outline-offset: 1px;
 }
-
