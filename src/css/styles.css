@@ -247,6 +247,7 @@ html {
       font-size: 20px; } }
 
 body {
+  --hover: $green;
   -webkit-animation: 1500ms fade-in;
           animation: 1500ms fade-in;
   background-color: #f6f4f3;
@@ -259,8 +260,7 @@ body {
   max-width: 1560px;
   padding: 1.3rem;
   -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  --hover: #00584b; }
+  transition: all 0.2s ease-in-out; }
   @media screen and (min-width: 800px) {
     body {
       margin-right: auto;
@@ -330,8 +330,8 @@ nav {
     nav {
       margin-bottom: 0; } }
   nav ul {
-    display: -webkit-box;
     display: -ms-flexbox;
+    display: -webkit-box;
     display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -397,9 +397,6 @@ header {
           margin-right: auto;
           -o-object-fit: cover;
              object-fit: cover;
-          opacity: var(--opacity);
-          -webkit-transform: translate(var(--left));
-                  transform: translate(var(--left));
           width: 100%; } }
   header .header__bio {
     grid-column: 1 / -1;
@@ -413,20 +410,6 @@ header {
       position: relative; }
     header .header__bio a {
       font-size: 1rem; }
-  header svg {
-    position: absolute;
-    bottom: -300px;
-    right: 0;
-    z-index: -1; }
-    header svg path.animate {
-      stroke-dasharray: 5000;
-      stroke-dashoffset: 5000;
-      -webkit-animation: dash 750ms linear 1750ms forwards;
-              animation: dash 750ms linear 1750ms forwards; }
-  @media screen and (min-width: 1000px) {
-    header .fade-left,
-    header .fade-right {
-      right: var(--left); } }
 
 /***********************************
   Main
