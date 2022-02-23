@@ -247,7 +247,7 @@ html {
       font-size: 20px; } }
 
 body {
-  --hover: $green;
+  --hover: #00584b;
   -webkit-animation: 1500ms fade-in;
           animation: 1500ms fade-in;
   background-color: #f6f4f3;
@@ -343,7 +343,9 @@ nav {
   nav li {
     padding: 8px; }
   nav a {
-    font-size: 16px; }
+    display: inline-block;
+    font-size: 16px;
+    line-height: 24px; }
 
 /***********************************
   Header
