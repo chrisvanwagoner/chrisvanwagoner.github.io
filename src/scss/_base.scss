@@ -1,0 +1,79 @@
+/***********************************
+base.scss
+***********************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  ::selection {
+    background: $green;
+    color: #FFF;
+  }
+  
+  html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    cursor: default;
+    font-size: 20px;
+    font-family: sans-serif; 
+    scroll-behavior: smooth;
+  
+    // @media #{$min-800} {
+      // font-size: 20px;
+    // }
+  
+  }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+small,
+a {
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  @extend %h1;
+}
+
+h2 {
+  @extend %h2;
+}
+
+h3,
+.h3-like {
+  @extend %h3;
+}
+
+h4 {
+  @extend %h4;
+}
+
+p {
+  @extend %paragraph;
+
+  &:not(:last-child) {
+    margin-bottom: $lh;
+  }
+}
+
+small {
+  @extend %small;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  @extend %link;
+}
