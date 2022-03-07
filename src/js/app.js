@@ -105,19 +105,6 @@ var clients = [
     year: 2018
   },
   {
-    name: "VEDA Data",
-    class: "veda",
-    summary: "Harnessing machine learning, VEDA's services examine healthcare data and provide solutions to the industry's complex problems.",
-    category: "Data + Machine Learning",
-    url: "https://vedadata.com",
-    imgPlc: "images/veda-data.jpg",
-    imgSrc: "images/veda-data@1x.jpg",
-    imgSrcSet: "images/veda-data@2x.jpg 2x",
-    imgAlt: "Screenshot of the Veda Data homepage header",
-    bgColor: "#E9E5F4",
-    year: 2018
-  },
-  {
     name: "National Disability Rights Network",
     class: "ndrn",
     url: "https://ndrn.org",
