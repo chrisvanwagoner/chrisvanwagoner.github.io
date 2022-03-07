@@ -1,6 +1,32 @@
 /* app.js */
 var clients = [
   {
+    name: "FSG, Inc",
+    class: "fsg-fsg",
+    url: "https://fsg.org/",
+    summary: "",
+    category: "",
+    imgPlc: "",
+    imgSrc: "",
+    imgSrcSet: " 2x",
+    imgAlt: "",
+    bgColor: "",
+    year: 2022
+  },
+  {
+    name: "Smokefree Oregon",
+    class: "sfo",
+    url: "https://smokefreeoregon.com",
+    summary: "",
+    category: "",
+    imgPlc: "",
+    imgSrc: "",
+    imgSrcSet: " 2x",
+    imgAlt: "",
+    bgColor: "",
+    year: 2018
+  },
+  {
     name: "Entertainment Software Association",
     class: "esa-map",
     url: "https://www.theesa.com/video-game-impact-map/",
@@ -10,47 +36,25 @@ var clients = [
     imgSrc: "images/fike.jpg",
     imgSrcSet: " 2x",
     imgAlt: "",
-    bgColor: ""
+    bgColor: "",
+    year: 2019
   },
   {
-    name: "Greater & Greener",
-    class: "gg",
-    url: "https://www.greatergreener.org/",
-    summary: "",
-    category: "",
-    imgPlc: "",
-    imgSrc: "images/fike.jpg",
-    imgSrcSet: " 2x",
-    imgAlt: "",
-    bgColor: ""
-  },
-  {
-    name: "State of Babies",
-    class: "sob",
+    name: "State of Babies Yearbook",
+    class: "ztt-sob",
     url: "https://www.stateofbabies.org",
     summary: "",
     category: "",
     imgPlc: "",
-    imgSrc: "images/fike.jpg",
+    imgSrc: "",
     imgSrcSet: " 2x",
     imgAlt: "",
-    bgColor: ""
-  },
-  {
-    name: "Smokefree Oregon",
-    class: "sfo",
-    url: "https://smokefreeoregon.com",
-    summary: "",
-    category: "",
-    imgPlc: "",
-    imgSrc: "images/fike.jpg",
-    imgSrcSet: " 2x",
-    imgAlt: "",
-    bgColor: ""
+    bgColor: "",
+    year: 2022
   },
   {
     name: "City Parks Alliance",
-    class: "cityparks",
+    class: "cpa-cpa",
     summary: "A new website build with custom masonry layout of featured content for the nation's only independent nonprofit organization for urban parks.",
     category: "National Nonprofit",
     url: "https://cityparksalliance.org",
@@ -58,7 +62,8 @@ var clients = [
     imgSrc: "images/city-parks-alliance@1x.jpg",
     imgSrcSet: "images/city-parks-alliance@2x.jpg 2x",
     imgAlt: "Screenshot of the City Parks Alliance homepage header",
-    bgColor: "#E5F4ED"
+    bgColor: "#E5F4ED",
+    year: 2018
   },
   {
     name: "Fike",
@@ -70,11 +75,25 @@ var clients = [
     imgSrc: "images/fike@1x.jpg",
     imgSrcSet: "images/fike@2x.jpg 2x",
     imgAlt: "Screenshot of the Fike homepage header",
-    bgColor: "rgb(244, 232, 224)"
+    bgColor: "rgb(244, 232, 224)",
+    year: 2018
+  },
+  {
+    name: "Greater & Greener",
+    class: "cpa-gg",
+    url: "https://www.greatergreener.org/",
+    summary: "",
+    category: "",
+    imgPlc: "",
+    imgSrc: "",
+    imgSrcSet: " 2x",
+    imgAlt: "",
+    bgColor: "",
+    year: 2020
   },
   {
     name: "Federal City Council",
-    class: "fedcity",
+    class: "fcc",
     summary: "For over 60 years, Federal City Council has sought to improve civic life in Washington, D.C.",
     category: "DC Nonrofit",
     url: "https://www.federalcitycouncil.org",
@@ -82,19 +101,8 @@ var clients = [
     imgSrc: "images/federal-city-council@1x.jpg",
     imgSrcSet: "images/federal-city-council@2x.jpg 2x",
     imgAlt: "Screenshot of the Federal City Council homepage header",
-    bgColor: "#DFE4F0"
-  },
-  {
-    name: "America's Physician Groups",
-    class: "apg",
-    url: "https://www.apg.org",
-    summary: "",
-    category: "",
-    imgPlc: "",
-    imgSrc: "images/fike.jpg",
-    imgSrcSet: " 2x",
-    imgAlt: "",
-    bgColor: ""
+    bgColor: "#DFE4F0",
+    year: 2018
   },
   {
     name: "VEDA Data",
@@ -106,7 +114,8 @@ var clients = [
     imgSrc: "images/veda-data@1x.jpg",
     imgSrcSet: "images/veda-data@2x.jpg 2x",
     imgAlt: "Screenshot of the Veda Data homepage header",
-    bgColor: "#E9E5F4"
+    bgColor: "#E9E5F4",
+    year: 2018
   },
   {
     name: "National Disability Rights Network",
@@ -115,10 +124,11 @@ var clients = [
     summary: "",
     category: "",
     imgPlc: "",
-    imgSrc: "images/fike.jpg",
+    imgSrc: "",
     imgSrcSet: " 2x",
     imgAlt: "",
-    bgColor: ""
+    bgColor: "",
+    year: 2018
   },
   {
     name: "Campaign for Inclusive Care",
@@ -127,10 +137,11 @@ var clients = [
     summary: "",
     category: "",
     imgPlc: "",
-    imgSrc: "images/fike.jpg",
+    imgSrc: "",
     imgSrcSet: " 2x",
     imgAlt: "",
-    bgColor: ""
+    bgColor: "",
+    year: 2018
   },
   {
     name: "Caregiver Journey",
@@ -139,34 +150,24 @@ var clients = [
     summary: "",
     category: "",
     imgPlc: "",
-    imgSrc: "images/fike.jpg",
+    imgSrc: "",
     imgSrcSet: " 2x",
     imgAlt: "",
-    bgColor: ""
+    bgColor: "",
+    year: 2018
   },
   {
     name: "Retail Opportunity Network",
-    class: "ron",
+    class: "fsg-ron",
     url: "https://retailopportunitynetwork.org",
     summary: "",
     category: "",
     imgPlc: "",
-    imgSrc: "images/fike.jpg",
+    imgSrc: "",
     imgSrcSet: " 2x",
     imgAlt: "",
-    bgColor: ""
-  },
-  {
-    name: "ACT's My Success",
-    class: "act",
-    url: "https://mysuccess.act.org/",
-    summary: "",
-    category: "",
-    imgPlc: "",
-    imgSrc: "images/fike.jpg",
-    imgSrcSet: " 2x",
-    imgAlt: "",
-    bgColor: ""
+    bgColor: "",
+    year: 2018
   },
   {
     name: "Kirk Humanitarian",
@@ -175,10 +176,11 @@ var clients = [
     summary: "",
     category: "",
     imgPlc: "",
-    imgSrc: "images/fike.jpg",
+    imgSrc: "",
     imgSrcSet: " 2x",
     imgAlt: "",
-    bgColor: ""
+    bgColor: "",
+    year: 2018
   },
   {
     name: "McKinley Advisors",
@@ -187,10 +189,11 @@ var clients = [
     summary: "",
     category: "",
     imgPlc: "",
-    imgSrc: "images/fike.jpg",
+    imgSrc: "",
     imgSrcSet: " 2x",
     imgAlt: "",
-    bgColor: ""
+    bgColor: "",
+    year: 2018
   }
 ];
 
