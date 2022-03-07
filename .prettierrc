@@ -11,5 +11,9 @@
   },
   "[sass]": {
     "tabWidth": 2
+  },
+  "[jade]": {
+    "tabWidth": 4,
+    "useTabs": true
   }
 }
