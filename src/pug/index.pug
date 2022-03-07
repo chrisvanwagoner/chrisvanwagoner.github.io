@@ -10,35 +10,36 @@ html(lang='en')
 		link(type='text/plain', rel='author', href='https://www.chrisvanwagoner.com/humans.txt')
 		link(href="css/styles.css" rel="stylesheet" type="text/css" media="screen")
 	body
-		nav
+		//- nav
 			ul
 				li 
 					a(href='/') Home
 				li 
-					a(href='/blog') Blog
+					a(href='/photos.html') Photos
 				li 
-					a(href='/photos') Photos
-				li 
-					a(href='/colophon') Colophon
+					a(href='/colophon.html') Colophon
 		button.toggle(aria-labelledby="toggle-label")
 			span#toggle-label(hidden) Switch to dark mode
-		header
-			h1.header__name Chris van Wagoner
+		#preview(aria-hidden='true')
+		header.header--grid
+			h1.header__title Chris van Wagoner
 			figure.header__figure
 				img.lazyload(src='images/chris-van-wagoner-portrait-blur.jpg', 
 				srcset='images/chris-van-wagoner-portrait-blur.jpg', 
 				data-src='images/chris-van-wagoner-portrait@1x.jpg', 
 				data-srcset='images/chris-van-wagoner-portrait@2x.jpg 2x', 
-				alt='Chris van Wagoner headshot', 
+				alt='A black and white photograph of Chris van Wagoner', 
+				height='512',
+				width='512',
 				loading='lazy')
-			.header__bio
-				p Chris van Wagoner is a D.C.-based senior developer. At #[a.link(href='https://www.socialdriver.com' target='_blank' rel='noopener') Social&nbsp;Driver], he works with visual and UX designers, account and project managers, and stakeholders to build fast, beautiful sites for non-profits in Washington and across the U.S.
+			.header__intro
+				p Chris is a D.C.-based senior developer. At #[a.link(href='https://www.socialdriver.com' target='_blank' rel='noopener') Social&nbsp;Driver], he works with visual and UX designers, account and project managers, and stakeholders to build fast, beautiful sites for non-profits in Washington and across the U.S.
+				p This website is a limited look at my work.
 		main#app
 			h2.main__title Selected <br>Work
 			ul.main__clients
 				li(v-for='(client, index) in clients' :key='index', 
-				v-bind:class="'client client-' + index",
-				data-animate-duration='300ms')
+				v-bind:class="'client client--' + client.class")
 					a.client__name(v-bind:href='client.url', 
 					v-bind:data-preview='client.imgSrc',
 					target='_blank', 
