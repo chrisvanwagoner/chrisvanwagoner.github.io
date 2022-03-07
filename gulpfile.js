@@ -41,9 +41,9 @@ function browserSyncReload(done) {
 
 /* Pug to HTML */
 function html() {
-  del(['src/index.html']);
+  del(['src/*.html']);
   return gulp
-    .src('src/index.pug')
+    .src('src/pug/*.pug')
     .pipe(pug())
     .pipe(gulp.dest('./src'))
     .pipe(browsersync.stream());
@@ -138,7 +138,7 @@ function build() {
     .pipe(gulp.dest('dist/css'));
   
   gulp
-    .src(['src/index.html'])
+    .src(['src/*.html'])
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('./dist'));
 
@@ -159,7 +159,7 @@ function watchFiles() {
   gulp.watch("./src/scss/**/*", styles);
   // gulp.watch("./src/js/**/*", scripts);
   gulp.watch("./src/js/runthis.js", scripts);
-  gulp.watch('./src/index.pug', html);
+  gulp.watch('./src/pug/**/*', html);
 }
 
 // define complex tasks
