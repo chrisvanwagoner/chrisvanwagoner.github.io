@@ -5,6 +5,7 @@ let preview = document.querySelector("#preview");
 let toggleButton = document.querySelector(".toggle");
 let fadeLeft = document.querySelectorAll(".fade-left");
 let fadeRight = document.querySelectorAll(".fade-right");
+let main = document.querySelector("main");
 let clientEntry = document.querySelectorAll(".client");
 let windowHeight = window.innerHeight;
 let targetTop = windowHeight * 0.4;
@@ -34,24 +35,26 @@ let targetBottom = windowHeight * 0.7;
 //     delay: 500,
 // });
 
-// // Updating #preview with client site images
+// Updating #preview with client site images
 // clientEntry.forEach((el) => {
 // 	let elName = el.querySelector('.client__name');
-// 	elName.addEventListener('mouseover', e => {
-// 		let elPreview = e.target.offsetParent.getAttribute('data-preview');
-// 		// console.log(elPreview);
-// 		preview.style.opacity = 1;
+
+// 	elName.addEventListener('mouseover', event => {
+//         let x = event.pageX;
+//         let y = event.pageY;
+// 		// console.log(`x:${x} y:${y}`);
+// 		let elPreview = event.target.offsetParent.getAttribute('data-preview');
 // 		preview.style.backgroundImage = `url("../${elPreview}")`;
-// 		// TODO: replace e.pageX/Y with cursor position
+// 		preview.style.opacity = 0.2;
 // 		preview.style.setProperty('--x', `${x}px`);
 // 		preview.style.setProperty('--y', `${y}px`);
-// 		console.log(`x: ${x}\ty: ${y}`);
-
 // 	});
-// 	elName.addEventListener('mouseout', () => {
-// 		// preview.style.opacity = 0;
+	
+// 	elName.addEventListener('mouseleave', event => {
+// 		preview.style.opacity = 0;
 // 	});
 // });
+
 
 // // Move header and client elements as page is scrolled
 // const scrollEvents = () => {
@@ -150,7 +153,7 @@ const setColorScheme = (e) => {
 setColorScheme(colorSchemeQueryList);
 colorSchemeQueryList.addEventListener(setColorScheme, null);
 
-
+// Adding custom focus class for "tab" keyboard users
 let focusable =  document.querySelectorAll('a, button');
 focusable.forEach((el) => {
 	el.addEventListener('mousedown', (event) => {
