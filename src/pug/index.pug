@@ -1,23 +1,8 @@
+//- index.pug
 doctype html
 html(lang='en')
-	head
-		meta(charset='utf-8')
-		title Chris van Wagoner
-		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=1.0')
-		meta(name='description', content='The homepage for DC-based frontend web developer, Chris van Wagoner')
-		link(rel='shortcut icon', href='images/apple-touch-icon.png')
-		link(rel='apple-touch-icon', href='images/apple-touch-icon.png')
-		link(type='text/plain', rel='author', href='https://www.chrisvanwagoner.com/humans.txt')
-		link(href="css/styles.css" rel="stylesheet" type="text/css" media="screen")
-	body
-		//- nav
-			ul
-				li 
-					a(href='/') Home
-				li 
-					a(href='/photos.html') Photos
-				li 
-					a(href='/colophon.html') Colophon
+	include templates/head.pug
+	body.home
 		button.toggle(aria-labelledby="toggle-label")
 			span#toggle-label(hidden) Switch to dark mode
 		#preview(aria-hidden='true')
@@ -33,8 +18,7 @@ html(lang='en')
 				width='512',
 				loading='lazy')
 			.header__intro
-				p Chris is a D.C.-based senior developer. At #[a.link(href='https://www.socialdriver.com' target='_blank' rel='noopener') Social&nbsp;Driver], he works with visual and UX designers, account and project managers, and stakeholders to build fast, beautiful sites for non-profits in Washington and across the U.S.
-				p This website is a limited look at my work.
+				p Chris is a Maryland-based web developer for the digital marketing agency, #[a.link(href='https://www.socialdriver.com' target='_blank' rel='noopener') Social&nbsp;Driver].
 		main#app
 			h2.main__title Selected <br>Work
 			ul.main__clients
@@ -45,16 +29,5 @@ html(lang='en')
 					target='_blank', 
 					rel='noopener') 
 						span {{ client.name }}
-		footer
-			.contact
-				h2.h3-like 
-					span Connections  
-				ul    
-					li
-						a(href='https://github.com/chrisvanwagoner', target='_blank', rel='noopener') GitHub
-					li
-						a(href='https://www.linkedin.com/in/chrisvanwagoner/', target='_blank', rel='noopener') LinkedIn
-					li
-						a(href='https://vsco.co/cvw/gallery', target='_blank', rel='noopener') VSCO
-				p Located in Washington, D.C.
-		script(src="js/scripts.js")
+		include templates/footer.pug
+		
