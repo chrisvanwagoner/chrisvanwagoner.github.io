@@ -46,3 +46,5 @@ Temporary Items
 src/images-unused/.DS_Store
 .well-known/*
 *.swp
+
+.idea/*
