@@ -36,25 +36,25 @@ $min-1600: "screen and (min-width: 1600px)";
 %headingExtraLight {
     font-family: inherit;
     font-weight: 200;
-    font-variation-settings: "wght" 200;
+    // font-variation-settings: "wght" 200;
 }
 
 %heading {
     font-family: inherit;
     font-weight: 400;
-    font-variation-settings: "wght" 400;
+    // font-variation-settings: "wght" 400;
 }
 
 %headingBold {
     font-family: inherit;
     font-weight: 700;
-    font-variation-settings: "wght" 700;
+    // font-variation-settings: "wght" 700;
 }
 
 %headingBlack {
     font-family: inherit;
     font-weight: 900;
-    font-variation-settings: "wght" 900;
+    // font-variation-settings: "wght" 900;
 }
 
 %headingSerif {
@@ -66,7 +66,7 @@ $min-1600: "screen and (min-width: 1600px)";
 %text {
     font-style: normal;
     font-weight: 300;
-    font-variation-settings: "wght" 300;
+    // font-variation-settings: "wght" 300;
 }
 
 %h1 {
@@ -138,7 +138,7 @@ $min-1600: "screen and (min-width: 1600px)";
     @extend %text;
     color: inherit;
     font-size: 1rem;
-    letter-spacing: -0.3px;
+    // letter-spacing: -0.3px;
     line-height: $lh;
 }
 %small {
@@ -156,7 +156,7 @@ $min-1600: "screen and (min-width: 1600px)";
 %link {
     font-size: $fs;
     font-weight: 400;
-    font-variation-settings: "wght" 400;
+    // font-variation-settings: "wght" 400;
     color: inherit;
     transition: color 0.2s ease-in-out;
     position: relative;

@@ -17,11 +17,12 @@ body {
   --hover: #00584b;
   animation: 1500ms fade-in;
 	background-color: $bg;
-	font-family:  sans-serif;
+	// font-family:  'AileronThin', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, avenir, "segoe ui", "helvetica neue", helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
 	-moz-osx-font-smoothing: grayscale;
 	font-smoothing: antialiased;
 	font-weight: 300;
-	font-variation-settings: 'wght'300;
+	// font-variation-settings: 'wght'300;
 	color: $text;
 	max-width: 1560px;
   padding:$lh;
@@ -98,7 +99,9 @@ body {
 	}
 }
 
-
+nav {
+  margin-bottom: $lh * 2;
+}
 
 
 
@@ -132,20 +135,21 @@ header {
   
   &.header--grid {
     @extend %grid-header;
-  }
-  @media #{$max-1000} {
-    max-width: 512px;
-    margin-left: auto;
-    margin-right: auto;
+
+    @media #{$max-1000} {
+      max-width: 512px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    @media #{$min-1200} {
+      height: 80vh;
+      min-height: 800px;
+      // height: clamp(900px, 80vh, 80vw);
+    }
   }
 
-	@media #{$min-1200} {
-    height: 80vh;
-    min-height: 1000px;
-    // height: clamp(900px, 80vh, 80vw);
-	}
-
-  .header__title {
+  h1 {
 		grid-column: 1 / -1;
     position: relative;
     margin-bottom: $lh;
@@ -153,7 +157,7 @@ header {
 		@media #{$min-1000} {
 			grid-column: 8 / 12;
 			grid-row: 3 / 4;
-      margin-bottom: 0;
+      margin-bottom: $lh * 2;
 		}
 	}
 
@@ -285,11 +289,12 @@ main {
       bottom: 0;
 
       @media #{$min-800} {
-        bottom: 0.9vw;
+        // bottom: 0.9vw;
+        bottom: 0.1em;
       }
 
       @media #{$min-1200} {
-        bottom: 1.3vw;
+        // bottom: 0.6vw;
       }
     }
 
@@ -304,7 +309,7 @@ Footer
 ***********************************/
 footer {
   display: block;
-  margin-bottom: $lh * 8;
+  // margin-bottom: $lh * 8;
 
   .contact {
   }
@@ -322,5 +327,8 @@ footer {
 
   p {
     margin-top: $lh * 2;
+  }
+  .copyright {
+    margin-top: $lh * 8;
   }
 }

@@ -1,6 +1,19 @@
 /* app.js */
 var clients = [
   {
+    name: "ZERO TO THREE",
+    class: "ztt-ztt",
+    url: "https://www.zerotothree.org/",
+    summary: "",
+    category: "",
+    imgPlc: "",
+    imgSrc: "",
+    imgSrcSet: " 2x",
+    imgAlt: "",
+    bgColor: "",
+    year: 2022
+  },
+  {
     name: "FSG, Inc",
     class: "fsg-fsg",
     url: "https://fsg.org/",
