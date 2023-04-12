@@ -53,13 +53,11 @@ SASS Variables
 ***********************************/
 main .client__name {
   font-family: inherit;
-  font-weight: 400;
-  font-variation-settings: "wght" 400; }
+  font-weight: 400; }
 
 small {
   font-family: inherit;
-  font-weight: 700;
-  font-variation-settings: "wght" 700; }
+  font-weight: 700; }
 
 h1, h2, h3,
 .h3-like, h4 {
@@ -69,8 +67,7 @@ h1, h2, h3,
 
 p {
   font-style: normal;
-  font-weight: 300;
-  font-variation-settings: "wght" 300; }
+  font-weight: 300; }
 
 h1 {
   color: inherit;
@@ -124,7 +121,6 @@ h4 {
 p {
   color: inherit;
   font-size: 1rem;
-  letter-spacing: -0.3px;
   line-height: 1.3rem; }
 
 small {
@@ -140,7 +136,6 @@ small {
 a {
   font-size: 1rem;
   font-weight: 400;
-  font-variation-settings: "wght" 400;
   color: inherit;
   -webkit-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out;
@@ -284,11 +279,10 @@ body {
   -webkit-animation: 1500ms fade-in;
           animation: 1500ms fade-in;
   background-color: #f6f4f3;
-  font-family: sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, avenir, "segoe ui", "helvetica neue", helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
   font-weight: 300;
-  font-variation-settings: "wght" 300;
   color: #19181d;
   max-width: 1560px;
   padding: 1.3rem;
@@ -349,6 +343,9 @@ body {
         body:not(.light-mode) path {
           stroke: #CACACA; } }
 
+nav {
+  margin-bottom: 2.6rem; }
+
 /***********************************
   Preview
 ***********************************/
@@ -376,23 +373,23 @@ header {
   margin-bottom: 10.4rem;
   overflow: hidden; }
   @media screen and (max-width: 1000px) {
-    header {
+    header.header--grid {
       max-width: 512px;
       margin-left: auto;
       margin-right: auto; } }
   @media screen and (min-width: 1200px) {
-    header {
+    header.header--grid {
       height: 80vh;
-      min-height: 1000px; } }
-  header .header__title {
+      min-height: 800px; } }
+  header h1 {
     grid-column: 1 / -1;
     position: relative;
     margin-bottom: 1.3rem; }
     @media screen and (min-width: 1000px) {
-      header .header__title {
+      header h1 {
         grid-column: 8 / 12;
         grid-row: 3 / 4;
-        margin-bottom: 0; } }
+        margin-bottom: 2.6rem; } }
   header .header__figure {
     grid-column: 1 / -1;
     grid-row: 2 / 3;
@@ -492,10 +489,7 @@ main {
       bottom: 0; }
       @media screen and (min-width: 800px) {
         main .client__name:before, main .client__name:after {
-          bottom: 0.9vw; } }
-      @media screen and (min-width: 1200px) {
-        main .client__name:before, main .client__name:after {
-          bottom: 1.3vw; } }
+          bottom: 0.1em; } }
     main .client__name span {
       overflow: hidden; }
 
@@ -503,8 +497,7 @@ main {
 Footer
 ***********************************/
 footer {
-  display: block;
-  margin-bottom: 10.4rem; }
+  display: block; }
   footer h2 {
     position: relative;
     margin-bottom: 2.6rem; }
@@ -512,3 +505,5 @@ footer {
     margin-bottom: 1.3rem; }
   footer p {
     margin-top: 2.6rem; }
+  footer .copyright {
+    margin-top: 10.4rem; }
