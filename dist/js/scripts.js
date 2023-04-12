@@ -17,6 +17,19 @@
 /* app.js */
 var clients = [
   {
+    name: "ZERO TO THREE",
+    class: "ztt-ztt",
+    url: "https://www.zerotothree.org/",
+    summary: "",
+    category: "",
+    imgPlc: "",
+    imgSrc: "",
+    imgSrcSet: " 2x",
+    imgAlt: "",
+    bgColor: "",
+    year: 2022
+  },
+  {
     name: "FSG, Inc",
     class: "fsg-fsg",
     url: "https://fsg.org/",
@@ -118,19 +131,6 @@ var clients = [
     imgSrcSet: "images/federal-city-council@2x.jpg 2x",
     imgAlt: "Screenshot of the Federal City Council homepage header",
     bgColor: "#DFE4F0",
-    year: 2018
-  },
-  {
-    name: "VEDA Data",
-    class: "veda",
-    summary: "Harnessing machine learning, VEDA's services examine healthcare data and provide solutions to the industry's complex problems.",
-    category: "Data + Machine Learning",
-    url: "https://vedadata.com",
-    imgPlc: "images/veda-data.jpg",
-    imgSrc: "images/veda-data@1x.jpg",
-    imgSrcSet: "images/veda-data@2x.jpg 2x",
-    imgAlt: "Screenshot of the Veda Data homepage header",
-    bgColor: "#E9E5F4",
     year: 2018
   },
   {
