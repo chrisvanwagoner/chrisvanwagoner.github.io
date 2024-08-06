@@ -3,31 +3,26 @@ base.scss
 ***********************************/
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  ::selection {
-    background: $green;
-    color: #FFF;
-  }
-  
-  html {
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    cursor: default;
-    font-size: 20px;
-    font-family: sans-serif; 
-    scroll-behavior: smooth;
-  
-    // @media #{$min-800} {
-      // font-size: 20px;
-    // }
-  
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  background: $green;
+  color: #FFF;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  cursor: default;
+  font-size: 20px;
+  font-family: sans-serif; 
+  scroll-behavior: smooth;
+}
 
 h1,
 h2,
@@ -72,6 +67,16 @@ small {
 
 ul {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: $lh;
+}
+
+li {
+  // &:not(:last-child) {
+  //   margin-bottom: $lh * 0.5;
+  //   margin-bottom: 10px;
+  // }
 }
 
 a {
