@@ -1,0 +1,21 @@
+doctype html
+html(lang='en')
+	include templates/head.pug
+	body.colophon-page
+		include templates/header.pug
+		main
+			h1.header__title Colophon
+			p This site was built using:
+			ul
+				li
+					a(href="https://vscodium.com/", target="_blank" rel="noreferrer") VSCodium
+				li
+					a(href="https://gulpjs.com/", target="_blank" rel="noreferrer") Gulp
+				li
+					a(href="https://pugjs.org/", target="_blank" rel="noreferrer") Pug
+				li
+					a(href="https://affinity.serif.com/photo/", target="_blank" rel="noreferrer") Affinity Photo
+				li
+					a(href="https://www.netlify.com/", target="_blank" rel="noreferrer") Netlify
+			//- p Finished for now.
+		include templates/footer.pug

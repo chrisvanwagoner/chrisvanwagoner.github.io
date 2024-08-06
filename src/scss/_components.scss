@@ -1,0 +1,142 @@
+/***********************************
+  Components
+***********************************/
+.skip-to-content {
+  @extend %visuallyhidden;
+}
+
+nav {
+  // margin-bottom: $lh * 8;
+  
+  // @media #{$min-1000} {
+  //   margin-bottom: 0;
+  // }
+  
+
+  ul {
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  // li {
+  //   padding: 0 8px;
+  // }
+  
+  a {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+// header {
+//   margin-bottom: $lh * 8;
+// 	overflow: hidden;
+// }
+
+
+.main__clients {
+  gap: 16px;
+  @media #{$min-1000} {
+    gap: 2vw;
+  }
+
+}
+.main__title {
+  // margin-bottom: 16px;
+}
+
+.client {
+  position: relative;
+  overflow: hidden;
+  text-align: right;
+  // padding: 6px;
+
+  // &:not(:last-child) {
+  //   margin-bottom: 1rem;
+  // }
+  
+
+}
+
+.client__name {
+  @extend %heading;
+  display: inline-block;
+  font-size: 5vw;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.2;
+  // padding: 6px;
+  transition: all 100ms ease-out;
+  
+  @media #{$min-800} {
+    font-weight: 200;
+    font-size: 4vw;
+    line-height: 1.2;
+  }
+
+  @media #{$min-1000} {
+    // font-weight: 200;
+    font-size: 2.4rem;
+  }
+  
+  @media #{$min-1200} {
+    // font-size: 5vw;
+    // letter-spacing: -2px;
+    // font-weight: 300;
+  }
+
+  @media #{$min-1600} {
+    // font-size: 90px;
+  }
+
+  &:before,
+  &:after {
+    bottom: 0;
+
+    @media #{$min-800} {
+      // bottom: 0.9vw;
+      bottom: 0.1em;
+    }
+
+    @media #{$min-1200} {
+      // bottom: 0.6vw;
+    }
+  }
+
+  span {
+    overflow: hidden;
+  }
+}
+
+
+
+/***********************************
+Footer
+***********************************/
+footer {
+  // display: block;
+  // margin-bottom: $lh * 8;
+
+  // .contact {
+  // }
+
+  
+
+  // li {
+    // &:not(:last-child) {
+    //   margin-bottom: $lh;
+    // }
+  // }
+
+  // p {
+  //   margin-top: $lh * 2;
+  // }
+  .copyright {
+    // margin-top: $lh * 8;
+  }
+}

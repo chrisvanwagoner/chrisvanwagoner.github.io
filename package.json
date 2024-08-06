@@ -1,7 +1,7 @@
 {
-  "name": "chrisvanwagoner",
-  "version": "1.0.0",
-  "description": "Personal Site",
+  "name": "chrisvanwagoner.com",
+  "version": "2.0.0",
+  "description": "Personal Site for Chris van Wagoner",
   "main": "index.js",
   "scripts": {
     "test": "test"
@@ -18,29 +18,42 @@
   },
   "homepage": "https://github.com/chrisvanwagoner/chrisvanwagoner.github.io#readme",
   "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "animejs": "^3.2.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-minify": "^0.5.1",
     "browser-sync": "^2.26.7",
     "del": "^3.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^4.1.0",
+    "gulp-babel": "^8.0.0",
     "gulp-cloudinary-upload": "^1.0.1",
     "gulp-concat": "^2.6.1",
     "gulp-concat-css": "^3.1.0",
     "gulp-cssmin": "^0.2.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^7.1.0",
+    "gulp-inject-string": "^1.1.2",
+    "gulp-minify-cssnames": "^2.1.0",
     "gulp-plumber": "^1.2.1",
     "gulp-pug": "^3.3.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^3.2.1",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
+    "gulp-vueify2": "^0.0.3",
     "imagekit": "^1.5.0",
     "node-normalize-scss": "^3.0.0",
-    "vue": "^2.5.17"
+    "vue": "^2.5.17",
+    "vueify-insert-css": "^1.0.0"
   },
   "dependencies": {
     "basicscroll": "^2.1.0",
     "clean-css": "^4.2.3",
-    "gulp-cli": "^2.2.0"
+    "gulp-cli": "^2.2.0",
+    "node-sass": "^7.0.0"
   }
 }

@@ -1,7 +1,76 @@
-var clients = [
+/* app.js */
+// import { createApp } from 'vue';
+// import test from '../components/test.js';
+
+let clients = [
+  {
+    name: "ZERO TO THREE",
+    class: "ztt-ztt",
+    url: "https://www.zerotothree.org/",
+    summary: "",
+    category: "",
+    imgPlc: "",
+    imgSrc: "",
+    imgSrcSet: " 2x",
+    imgAlt: "",
+    bgColor: "",
+    year: 2022
+  },
+  {
+    name: "FSG, Inc",
+    class: "fsg-fsg",
+    url: "https://fsg.org/",
+    summary: "",
+    category: "",
+    imgPlc: "",
+    imgSrc: "",
+    imgSrcSet: " 2x",
+    imgAlt: "",
+    bgColor: "",
+    year: 2022
+  },
+  {
+    name: "Smokefree Oregon",
+    class: "sfo",
+    url: "https://smokefreeoregon.com",
+    summary: "",
+    category: "",
+    imgPlc: "",
+    imgSrc: "",
+    imgSrcSet: " 2x",
+    imgAlt: "",
+    bgColor: "",
+    year: 2018
+  },
+  {
+    name: "Entertainment Software Association",
+    class: "esa-map",
+    url: "https://www.theesa.com/video-game-impact-map/",
+    summary: "",
+    category: "",
+    imgPlc: "",
+    imgSrc: "images/fike.jpg",
+    imgSrcSet: " 2x",
+    imgAlt: "",
+    bgColor: "",
+    year: 2019
+  },
+  {
+    name: "State of Babies Yearbook",
+    class: "ztt-sob",
+    url: "https://www.stateofbabies.org",
+    summary: "",
+    category: "",
+    imgPlc: "",
+    imgSrc: "",
+    imgSrcSet: " 2x",
+    imgAlt: "",
+    bgColor: "",
+    year: 2022
+  },
   {
     name: "City Parks Alliance",
-    class: "cityparks",
+    class: "cpa-cpa",
     summary: "A new website build with custom masonry layout of featured content for the nation's only independent nonprofit organization for urban parks.",
     category: "National Nonprofit",
     url: "https://cityparksalliance.org",
@@ -9,31 +78,8 @@ var clients = [
     imgSrc: "images/city-parks-alliance@1x.jpg",
     imgSrcSet: "images/city-parks-alliance@2x.jpg 2x",
     imgAlt: "Screenshot of the City Parks Alliance homepage header",
-    bgColor: "#E5F4ED"
-  },
-  {
-    name: "Anheuser-Busch",
-    class: "anheuser",
-    summary: "Site maintenance for Anheuser-Busch's platform for updates on their nationwide outreach.",
-    category: "Outreach",
-    url: "https://www.purposebeyondbrewing.com/index.html",
-    imgPlc: "images/anheuser-busch.jpg",
-    imgSrc: "images/anheuser-busch@1x.jpg",
-    imgSrcSet: "images/anheuser-busch@2x.jpg 2x",
-    imgAlt: "Screenshot of an Anheuser-Busch Purpose Beyond Brewing initiative page",
-    bgColor: "rgb(249, 245, 229)"
-  },
-  {
-    name: "Federal City Council",
-    class: "fedcity",
-    summary: "For over 60 years, Federal City Council has sought to improve civic life in Washington, D.C.",
-    category: "DC Nonrofit",
-    url: "https://www.federalcitycouncil.org",
-    imgPlc: "images/federal-city-council.jpg",
-    imgSrc: "images/federal-city-council@1x.jpg",
-    imgSrcSet: "images/federal-city-council@2x.jpg 2x",
-    imgAlt: "Screenshot of the Federal City Council homepage header",
-    bgColor: "#DFE4F0"
+    bgColor: "#E5F4ED",
+    year: 2018
   },
   {
     name: "Fike",
@@ -45,25 +91,136 @@ var clients = [
     imgSrc: "images/fike@1x.jpg",
     imgSrcSet: "images/fike@2x.jpg 2x",
     imgAlt: "Screenshot of the Fike homepage header",
-    bgColor: "rgb(244, 232, 224)"
+    bgColor: "rgb(244, 232, 224)",
+    year: 2018
   },
   {
-    name: "VEDA Data",
-    class: "veda",
-    summary: "Harnessing machine learning, VEDA's services examine healthcare data and provide solutions to the industry's complex problems.",
-    category: "Data + Machine Learning",
-    url: "https://vedadata.com",
-    imgPlc: "images/veda-data.jpg",
-    imgSrc: "images/veda-data@1x.jpg",
-    imgSrcSet: "images/veda-data@2x.jpg 2x",
-    imgAlt: "Screenshot of the Veda Data homepage header",
-    bgColor: "#E9E5F4"
+    name: "Greater & Greener",
+    class: "cpa-gg",
+    url: "https://www.greatergreener.org/",
+    summary: "",
+    category: "",
+    imgPlc: "",
+    imgSrc: "",
+    imgSrcSet: " 2x",
+    imgAlt: "",
+    bgColor: "",
+    year: 2020
+  },
+  {
+    name: "Federal City Council",
+    class: "fcc",
+    summary: "For over 60 years, Federal City Council has sought to improve civic life in Washington, D.C.",
+    category: "DC Nonrofit",
+    url: "https://www.federalcitycouncil.org",
+    imgPlc: "images/federal-city-council.jpg",
+    imgSrc: "images/federal-city-council@1x.jpg",
+    imgSrcSet: "images/federal-city-council@2x.jpg 2x",
+    imgAlt: "Screenshot of the Federal City Council homepage header",
+    bgColor: "#DFE4F0",
+    year: 2018
+  },
+  {
+    name: "National Disability Rights Network",
+    class: "ndrn",
+    url: "https://ndrn.org",
+    summary: "",
+    category: "",
+    imgPlc: "",
+    imgSrc: "",
+    imgSrcSet: " 2x",
+    imgAlt: "",
+    bgColor: "",
+    year: 2018
+  },
+  {
+    name: "Campaign for Inclusive Care",
+    class: "edf-cfic",
+    url: "https://campaignforinclusivecare.elizabethdolefoundation.org/",
+    summary: "",
+    category: "",
+    imgPlc: "",
+    imgSrc: "",
+    imgSrcSet: " 2x",
+    imgAlt: "",
+    bgColor: "",
+    year: 2018
+  },
+  {
+    name: "Caregiver Journey",
+    class: "edf-cj",
+    url: "https://caregiverjourney.elizabethdolefoundation.org/",
+    summary: "",
+    category: "",
+    imgPlc: "",
+    imgSrc: "",
+    imgSrcSet: " 2x",
+    imgAlt: "",
+    bgColor: "",
+    year: 2018
+  },
+  {
+    name: "Retail Opportunity Network",
+    class: "fsg-ron",
+    url: "https://retailopportunitynetwork.org",
+    summary: "",
+    category: "",
+    imgPlc: "",
+    imgSrc: "",
+    imgSrcSet: " 2x",
+    imgAlt: "",
+    bgColor: "",
+    year: 2018
+  },
+  {
+    name: "Kirk Humanitarian",
+    class: "kirk",
+    url: "https://kirkhumanitarian.org",
+    summary: "",
+    category: "",
+    imgPlc: "",
+    imgSrc: "",
+    imgSrcSet: " 2x",
+    imgAlt: "",
+    bgColor: "",
+    year: 2018
+  },
+  {
+    name: "McKinley Advisors",
+    class: "mckinley",
+    url: "https://www.mckinley-advisors.com/",
+    summary: "",
+    category: "",
+    imgPlc: "",
+    imgSrc: "",
+    imgSrcSet: " 2x",
+    imgAlt: "",
+    bgColor: "",
+    year: 2018
   }
 ];
 
-var main = new Vue({
-  el: '#main',
-  data: {
-    clients: clients
+// var app = new Vue({
+//   el: '#app',
+//   data: {
+//     clients: clients
+//   }
+// });
+
+// const app = createApp({
+//   el: '#app',
+//   data: {
+//     clients: clients
+//   }
+// });
+
+const { createApp } = Vue;
+createApp({
+  data() {
+    return {
+      clients: clients
+    }
   }
-});
+}).mount('#app');
+
+// app.compotent('test', test)

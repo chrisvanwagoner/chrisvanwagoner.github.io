@@ -1,0 +1,42 @@
+//- index.pug
+include data/clients.pug
+
+doctype html
+html(lang='en')
+	include templates/head.pug
+	body.home
+		include templates/header.pug
+		//- #preview(aria-hidden='true')
+		main#content
+			section.header
+				h1.header__title Chris van Wagoner
+				p.lede Chris is a Maryland-based web developer for the digital marketing agency, #[a.link(href='https://www.socialdriver.com' target='_blank' rel='noopener') Social&nbsp;Driver].
+				img(src='images/dithered-portrait.png', 
+					srcset='images/dithered-portrait@2x.png 2x', 
+					alt='A black and white, dithered photograph of Chris van Wagoner', 
+					height='512',
+					width='512')
+				
+			section
+				h2.main__title Selected <br>Work
+				ul.main__clients
+					each client in clients
+						li(class='client client--' + `${client.class}`)
+							a.client__name(href=`${client.url}`,
+							target='_blank', 
+							rel='noopener') 
+								span #{client.name}
+			section.contact
+				h2.h3-like 
+					span Other Places  
+				ul    
+					li
+						a(href='https://github.com/chrisvanwagoner', target='_blank', rel='noopener') GitHub
+					li
+						a(href='https://www.linkedin.com/in/chrisvanwagoner/', target='_blank', rel='noopener') LinkedIn
+					li
+						a(href='https://vsco.co/cvw/gallery', target='_blank', rel='noopener') VSCO
+					//- li 
+					//- 	a(href="https://mastodon.social/@chris_v", target="_blank", rel="me") Mastodon
+		include templates/footer.pug
+		

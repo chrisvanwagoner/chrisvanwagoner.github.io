@@ -1,0 +1,12 @@
+@keyframes fade-in{
+	/* 
+	 * Used on <body> when page loads
+	 * providing a smoother load experience
+	 */
+	from {
+	  opacity: 0;
+	}
+	to {
+	  opacity: 1;
+	}
+ }
