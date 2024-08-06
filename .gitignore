@@ -48,3 +48,4 @@ src/images-unused/.DS_Store
 *.swp
 
 .idea/*
+.theia/*
