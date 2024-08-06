@@ -1,12 +1,18 @@
 //- photos.pug
+include data/photo-gallery-info.pug
+
 doctype html
 html(lang='en')
 	include templates/head.pug
-	body.photos
-		include templates/nav.pug
-		header
-			h1 Photos
+	body.photos-page
+		include templates/header.pug
 		main
-            
-			
+			h1.header__title Photos
+			.header__intro A few images I’ve taken that I like.
+			.photo-grid  
+				each img in photoGalleryInfo
+					.photo 
+						img(src=`${img.src}`,
+						srcset=`${img.src2x}` + ' 2x',
+						loading='lazy')
 		include templates/footer.pug

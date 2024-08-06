@@ -127,20 +127,16 @@ let targetBottom = windowHeight * 0.7;
 // Toggle dark/light mode
 let toggleMode = () => {
     if (body.classList.contains("dark-mode") == true) {
-        body.classList.add("light-mode");
-        body.classList.remove("dark-mode");
-        event.target.innerHTML =
-            '<span id="toggle-label" hidden>Switch to dark mode</span>';
+        toggleLightMode();
     } else {
-        body.classList.add("dark-mode");
-        body.classList.remove("light-mode");
-        event.target.innerHTML =
-            '<span id="toggle-label" hidden>Switch to light mode</span>';
+		toggleDarkMode();
     }
 };
 
-toggleButton.addEventListener("click", toggleMode);
+// toggleButton.addEventListener("click", toggleMode);
 let colorSchemeQueryList = window.matchMedia("(prefers-color-scheme: dark)");
+console.log(window.matchMedia("(prefers-color-scheme: dark)"));
+console.log(window);
 
 const setColorScheme = (e) => {
     if (e.matches) {
@@ -152,6 +148,22 @@ const setColorScheme = (e) => {
 
 setColorScheme(colorSchemeQueryList);
 colorSchemeQueryList.addEventListener(setColorScheme, null);
+
+// const toggleLightMode = () => {
+// 	body.classList.add("light-mode");
+// 	body.classList.remove("dark-mode");
+// 	document.cookie = 'toggled-color-scheme=light-mode; expires=Thu, 01 Jan 2222 00:00:00 GMT; SameSite=None; Secure';
+// 	toggleButton.innerHTML =
+// 	'<span id="toggle-label" hidden>Switch to dark mode</span>';
+// }
+
+// const toggleDarkMode = () => {
+// 	body.classList.add("dark-mode");
+// 	body.classList.remove("light-mode");
+// 	document.cookie = 'toggled-color-scheme=dark-mode; expires=Thu, 01 Jan 2222 00:00:00 GMT; SameSite=None; Secure';
+// 	toggleButton.innerHTML =
+// 	'<span id="toggle-label" hidden>Switch to light mode</span>';
+// }
 
 // Adding custom focus class for "tab" keyboard users
 let focusable =  document.querySelectorAll('a, button');
@@ -175,3 +187,25 @@ focusable.forEach((el) => {
 		}
 	});
 });
+
+// check for display mode cookie 
+// if set, add appropriate class
+// document.cookie = 'color-scheme-toggle=dark-mode; expires=Thu, 01 Jan 2222 00:00:00 GMT; SameSite=None; Secure';
+// const allCookies = document.cookie;
+// console.log(allCookies);
+
+// const cookieValue = document.cookie
+// 	.split("; ")
+// 	.find((row) => row.startsWith("toggled-color-scheme="))
+// 	?.split("=")[1];
+// console.log(cookieValue);
+// if (cookieValue == 'dark-mode') {
+// 	toggleDarkMode();
+// } else if (cookieValue == 'light-mode') {
+// 	toggleLightMode();
+// } else {
+// }
+// body.classList.add("loading-done");
+
+
+// TODO: add a spcial script in the head above the style.css load to update the color-scheme

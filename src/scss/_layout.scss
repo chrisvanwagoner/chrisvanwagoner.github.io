@@ -1,0 +1,17 @@
+/* _layout.scss */
+
+body {
+    --section-spacing: 64px;
+    @media (min-height: 768px) and (min-width: 1000px) {
+        --section-spacing: 256px;
+    }
+
+    header,
+    section:not(:last-child) {
+        margin-bottom: var(--section-spacing);
+    }
+
+    footer {
+        margin-top: var(--section-spacing);
+    }
+}

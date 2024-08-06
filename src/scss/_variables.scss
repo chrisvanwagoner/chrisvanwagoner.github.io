@@ -20,6 +20,7 @@ $link-hover: $green;
 
 $fs: 1rem; // 20px
 $lh: $fs + ($fs * 0.3); // 26px
+$lh: 1.3;
 $spacer: $lh * 2;
 
 $min-400: "screen and (min-width: 400px)";
@@ -81,9 +82,9 @@ $min-1600: "screen and (min-width: 1600px)";
         line-height: $lh * 2;
     }
     @media #{$min-1000} {
-        font-size: 1.2rem;
+        font-size: 3.2rem;
         letter-spacing: 0.6px;
-        line-height: $lh;
+        line-height: $lh * 2;
     }
 }
 
@@ -97,16 +98,18 @@ $min-1600: "screen and (min-width: 1600px)";
     text-transform: uppercase;
 
     @media #{$min-800} {
-        font-size: 18vw;
+        font-size: 14vw;
     }
    
 	@media #{$min-1000} {
-		font-size: 18vw;
+		font-size: 12vw;
 		letter-spacing: -0.5vw;
+		font-size: 7rem;
+		// letter-spacing: -0.5vw;
 	}
    
 	@media #{$min-1200} {
-        font-size: 200px;
+        // font-size: 160px;
     }
 }
 
@@ -116,6 +119,7 @@ $min-1600: "screen and (min-width: 1600px)";
     font-size: 1.4rem;
     letter-spacing: 0px;
     line-height: 1;
+    text-transform: initial;
     @media #{$min-800} {
         font-size: 1.8rem;
     }
@@ -203,18 +207,19 @@ $min-1600: "screen and (min-width: 1600px)";
 %shadow {
     box-shadow: 0 2px 30px 5px rgba(143, 142, 173, 0.7);
 }
+
 %grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    // grid-column-gap: $lh;
 }
+
 %grid-header {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto 1fr auto;
     // grid-column-gap: $lh;
     @media #{$min-1000} {
-        grid-template-rows: repeat(12, 1fr);
+        grid-template-rows: repeat(8, 1fr);
     }
 }
 
@@ -222,4 +227,16 @@ $min-1600: "screen and (min-width: 1600px)";
     outline: 3px solid $green;
     // outline: 3px solid rgba($green, 0.5);
     outline-offset: 3px;
+}
+
+// Visually hide an element 
+%visuallyhidden {
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
+    position: absolute;
 }

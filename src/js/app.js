@@ -1,5 +1,8 @@
 /* app.js */
-var clients = [
+// import { createApp } from 'vue';
+// import test from '../components/test.js';
+
+let clients = [
   {
     name: "ZERO TO THREE",
     class: "ztt-ztt",
@@ -197,9 +200,27 @@ var clients = [
   }
 ];
 
-var app = new Vue({
-  el: '#app',
-  data: {
-    clients: clients
+// var app = new Vue({
+//   el: '#app',
+//   data: {
+//     clients: clients
+//   }
+// });
+
+// const app = createApp({
+//   el: '#app',
+//   data: {
+//     clients: clients
+//   }
+// });
+
+const { createApp } = Vue;
+createApp({
+  data() {
+    return {
+      clients: clients
+    }
   }
-});
+}).mount('#app');
+
+// app.compotent('test', test)

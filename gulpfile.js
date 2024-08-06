@@ -8,7 +8,7 @@ const cssmin = require('gulp-cssmin');
 const del = require('del');
 const gulp = require('gulp');
 const htmlmin = require('gulp-htmlmin');
-// const maps = require('gulp-sourcemaps');
+const sourcemaps = require('gulp-sourcemaps');
 const plumber = require('gulp-plumber');
 const pug = require('gulp-pug');
 // const rename = require('gulp-rename');
@@ -17,10 +17,19 @@ const uglify = require('gulp-uglify');
 // const minifyCssNames = require('gulp-minify-cssnames');
 
 const babel = require('gulp-babel');
+const inject = require('gulp-inject-string');
 // const concatCss = require('gulp-concat-css');
 // const imagemin = require('gulp-imagemin');
 // const ImageKit = require('imagekit'); 
 // const cloudinaryUpload = require('gulp-cloudinary-upload');
+const vueify = require('gulp-vueify2');
+
+ 
+function vue() {
+  return gulp.src('src/components/**/*')
+  .pipe(vueify({}))
+  .pipe(gulp.dest('src/html'));
+}
 
 // BrowserSync
 function browserSync(done) {
@@ -43,8 +52,9 @@ function browserSyncReload(done) {
 function html() {
   del(['src/*.html']);
   return gulp
-    .src('src/pug/*.pug')
+    .src('src/pug/**/*')
     .pipe(pug())
+    .pipe(inject.append('\n<!-- Created: ' + Date() + ' -->'))
     .pipe(gulp.dest('./src'))
     .pipe(browsersync.stream());
 }
@@ -58,8 +68,11 @@ function styles() {
     ])
     .pipe(concat('styles.scss'))
     .pipe(plumber())
+    .pipe(sourcemaps.init())
     .pipe(sass())
+    .pipe(sourcemaps.write())
     .pipe(autoprefixer())
+    .pipe(inject.prepend('/* Created: ' + Date() + ' */\n'))
     .pipe(gulp.dest('src/css'))
     // .src(['src/css/styles.css'])
     // .pipe(cssmin())
@@ -76,16 +89,19 @@ function scripts() {
       // 'src/js/lib/gsap.min.js',
       // 'src/js/lib/anime.min.js',
       // 'src/js/lib/wow.min.js',
-      'node_modules/vue/dist/vue.min.js',
-      'node_modules/animejs/lib/anime.min.js',
+      // 'node_modules/vue/dist/vue.min.js',
+      // 'node_modules/animejs/lib/anime.min.js',
       // 'src/js/lib/basicScroll.min.js',
-      'src/js/lib/lazysizes.min.js',
-      'src/js/app.js',
+      // 'src/js/lib/lazysizes.min.js',
+      // 'src/js/app.js',
       // 'src/js/app-cloudinary.js',
       'src/js/runthis.js',
       // 'src/js/lazyload.js',
     ])
+    .pipe(sourcemaps.init())
     .pipe(concat('scripts.js'))
+    .pipe(inject.prepend('// Created: ' + Date() + '\n'))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('src/js'))
     // .pipe(uglify())
     // .pipe(babel({presets: ['minify']}))
@@ -129,17 +145,20 @@ function build() {
     //   presets: ['@babel/env']
     // }))
     // .pipe(uglify())
+    .pipe(inject.prepend('// Created: ' + Date() + '\n'))
     .pipe(gulp.dest('dist/js'));
   
   gulp
     .src(['src/css/styles.css'])
     .pipe(cssmin())
     // .pipe(rename('styles.min.css'))
+    .pipe(inject.prepend('// Created: ' + Date() + '\n'))
     .pipe(gulp.dest('dist/css'));
   
   gulp
     .src(['src/*.html'])
     .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(inject.append('\n<!-- Created: ' + Date() + ' -->'))
     .pipe(gulp.dest('./dist'));
 
   return gulp
@@ -159,11 +178,13 @@ function watchFiles() {
   gulp.watch("./src/scss/**/*", styles);
   // gulp.watch("./src/js/**/*", scripts);
   gulp.watch("./src/js/runthis.js", scripts);
-  gulp.watch('./src/pug/**/*', html);
+  gulp.watch('./src/pug/**/*.pug', html);
 }
 
+
+
 // define complex tasks
-const start = gulp.series(styles, scripts, html);
+const start = gulp.series(styles, scripts, html, vue);
 const watch = gulp.parallel(watchFiles, browserSync);
 const run = gulp.series(start, watch);
 const dist = gulp.series(clean, start, build);
@@ -171,6 +192,7 @@ const dist = gulp.series(clean, start, build);
 // export tasks
 exports.images = images;
 exports.html = html;
+exports.vue = vue;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.clean = clean;
