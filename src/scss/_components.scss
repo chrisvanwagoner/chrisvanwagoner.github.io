@@ -1,24 +1,29 @@
 /***********************************
   Components
 ***********************************/
+.skip-to-content {
+  @extend %visuallyhidden;
+}
 nav {
-  margin-bottom: $lh * 8;
+  // margin-bottom: $lh * 8;
   
   // @media #{$min-1000} {
   //   margin-bottom: 0;
   // }
+  
 
   ul {
     display: -ms-flexbox;
     display: flex;
     justify-content: center;
     flex-direction: row;
+    gap: 16px;
   }
 
-  li {
-    padding: 8px;
-  }
-
+  // li {
+  //   padding: 0 8px;
+  // }
+  
   a {
     display: inline-block;
     font-size: 16px;
@@ -26,23 +31,28 @@ nav {
   }
 }
 
-header {
-  margin-bottom: $lh * 8;
-	overflow: hidden;
-}
+// header {
+//   margin-bottom: $lh * 8;
+// 	overflow: hidden;
+// }
 
 
 .main__clients {
+  gap: 16px;
   @media #{$min-1000} {
     gap: 2vw;
   }
+
+}
+.main__title {
+  // margin-bottom: 16px;
 }
 
 .client {
   position: relative;
   overflow: hidden;
   text-align: right;
-  padding: 6px;
+  // padding: 6px;
 
   // &:not(:last-child) {
   //   margin-bottom: 1rem;
@@ -55,18 +65,22 @@ header {
   @extend %heading;
   display: inline-block;
   font-size: 5vw;
-  font-weight: 200;
+  font-size: 1rem;
+  font-weight: 400;
   letter-spacing: 0;
   line-height: 1.2;
+  // padding: 6px;
   transition: all 100ms ease-out;
-
+  
   @media #{$min-800} {
+    font-weight: 200;
     font-size: 4vw;
     line-height: 1.2;
   }
 
   @media #{$min-1000} {
     // font-weight: 200;
+    font-size: 2.4rem;
   }
   
   @media #{$min-1200} {
@@ -98,20 +112,19 @@ header {
   }
 }
 
+
+
 /***********************************
 Footer
 ***********************************/
 footer {
-  display: block;
+  // display: block;
   // margin-bottom: $lh * 8;
 
-  .contact {
-  }
+  // .contact {
+  // }
 
-  h2 {
-    position: relative;
-    margin-bottom: $lh * 2;
-  }
+  
 
   // li {
     // &:not(:last-child) {
@@ -119,10 +132,10 @@ footer {
     // }
   // }
 
-  p {
-    margin-top: $lh * 2;
-  }
+  // p {
+  //   margin-top: $lh * 2;
+  // }
   .copyright {
-    margin-top: $lh * 8;
+    // margin-top: $lh * 8;
   }
 }

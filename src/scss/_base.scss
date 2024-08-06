@@ -53,12 +53,17 @@ h4 {
   @extend %h4;
 }
 
+.lede {
+  line-height: 1.5;
+  // width: fit-content;
+}
+
 p {
   @extend %paragraph;
 
-  &:not(:last-child) {
-    margin-bottom: $lh;
-  }
+  // &:not(:last-child) {
+  //   margin-bottom: $lh;
+  // }
 }
 
 small {
@@ -69,7 +74,8 @@ ul {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: $lh;
+  gap: 16px;
+  margin-top: 16px;
 }
 
 li {

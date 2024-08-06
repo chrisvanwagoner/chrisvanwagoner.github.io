@@ -5,11 +5,10 @@ doctype html
 html(lang='en')
 	include templates/head.pug
 	body.photos-page
-		include templates/nav.pug
-		header
+		include templates/header.pug
+		main
 			h1.header__title Photos
 			.header__intro A few images I’ve taken that I like.
-		main
 			.photo-grid  
 				each img in photoGalleryInfo
 					.photo 

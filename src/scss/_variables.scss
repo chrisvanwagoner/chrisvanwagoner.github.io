@@ -20,6 +20,7 @@ $link-hover: $green;
 
 $fs: 1rem; // 20px
 $lh: $fs + ($fs * 0.3); // 26px
+$lh: 1.3;
 $spacer: $lh * 2;
 
 $min-400: "screen and (min-width: 400px)";
@@ -94,18 +95,21 @@ $min-1600: "screen and (min-width: 1600px)";
     font-size: 16vw;
     letter-spacing: -0.7vw;
     line-height: 0.8;
+    text-transform: uppercase;
 
     @media #{$min-800} {
-        font-size: 18vw;
+        font-size: 14vw;
     }
    
 	@media #{$min-1000} {
-		font-size: 18vw;
+		font-size: 12vw;
 		letter-spacing: -0.5vw;
+		font-size: 7rem;
+		// letter-spacing: -0.5vw;
 	}
    
 	@media #{$min-1200} {
-        font-size: 160px;
+        // font-size: 160px;
     }
 }
 
@@ -115,6 +119,7 @@ $min-1600: "screen and (min-width: 1600px)";
     font-size: 1.4rem;
     letter-spacing: 0px;
     line-height: 1;
+    text-transform: initial;
     @media #{$min-800} {
         font-size: 1.8rem;
     }

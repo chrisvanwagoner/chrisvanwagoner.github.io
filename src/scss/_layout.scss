@@ -1,7 +1,17 @@
 /* _layout.scss */
 
-//TODO: default header, for colophon and photos
-//TODO: homepage header grid
-//TODO: photo grid
-//TODO: default main
-//TODO: homepage main
+body {
+    --section-spacing: 64px;
+    @media (min-height: 768px) and (min-width: 1000px) {
+        --section-spacing: 128px;
+    }
+
+    header,
+    section:not(:last-child) {
+        margin-bottom: var(--section-spacing);
+    }
+
+    footer {
+        margin-top: var(--section-spacing);
+    }
+}
