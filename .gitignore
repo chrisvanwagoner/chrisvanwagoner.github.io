@@ -45,3 +45,6 @@ Temporary Items
 .apdisk
 src/images-unused/.DS_Store
 .well-known/*
+
+.idea/*
+.theia/*
