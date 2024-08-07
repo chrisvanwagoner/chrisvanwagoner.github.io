@@ -7,9 +7,10 @@ html(lang='en')
 	body.photos-page
 		include templates/header.pug
 		main
-			h1.header__title Photos
-			.header__intro A few images I’ve taken that I like.
-			.photo-grid  
+			section.header
+				h1 Photos
+				.lede A few images I’ve taken that I like.
+			section.photo-grid  
 				each img in photoGalleryInfo
 					.photo 
 						img(src=`${img.src}`,
