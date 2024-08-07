@@ -1,20 +1,18 @@
 /***********************************
 _variables.scss
-SASS Variables
 ***********************************/
 
 $blue: #0005ec;
-// $green: #167568;
 $green: #00584b;
-// $heading: #19181D;
-// $bg: #F4F0EC;
-$bg: #f6f4f3;
-// $bg: #FFF;
-$text: #19181d;
-// $text: #24130C;
-// $link-underline: #CACACA;
 $gold: #bbab57;
+$light-grey: #CACACA;
+$white: #FFFFFF;
+$black: #000000;
+$off-white: #f6f4f3;
+$off-black: #19181d;
 
+$bg: $off-white;
+$text: $off-black;
 $link-underline: $gold;
 $link-hover: $green;
 
@@ -38,25 +36,21 @@ $min-1600: "screen and (min-width: 1600px)";
 %headingExtraLight {
     font-family: inherit;
     font-weight: 200;
-    // font-variation-settings: "wght" 200;
 }
 
 %heading {
     font-family: inherit;
     font-weight: 400;
-    // font-variation-settings: "wght" 400;
 }
 
 %headingBold {
     font-family: inherit;
     font-weight: 700;
-    // font-variation-settings: "wght" 700;
 }
 
 %headingBlack {
     font-family: inherit;
     font-weight: 900;
-    // font-variation-settings: "wght" 900;
 }
 
 %headingSerif {
@@ -68,7 +62,6 @@ $min-1600: "screen and (min-width: 1600px)";
 %text {
     font-style: normal;
     font-weight: 300;
-    // font-variation-settings: "wght" 300;
 }
 
 %h1 {
@@ -77,11 +70,12 @@ $min-1600: "screen and (min-width: 1600px)";
     font-size: 1.6rem;
     letter-spacing: -1px;
     line-height: $lh * 1.6;
-    // margin-bottom: $lh * 2;
+    
     @media #{$min-400} {
         font-size: 2rem;
         line-height: $lh * 2;
     }
+
     @media #{$min-1000} {
         font-size: 3.2rem;
         letter-spacing: 0.6px;
@@ -91,7 +85,6 @@ $min-1600: "screen and (min-width: 1600px)";
 
 %h2 {
     @extend %headingSerif;
-    // font-style: italic;
     color: inherit;
     font-size: 16vw;
     letter-spacing: -0.7vw;
@@ -106,12 +99,7 @@ $min-1600: "screen and (min-width: 1600px)";
 		font-size: 12vw;
 		letter-spacing: -0.5vw;
 		font-size: 7rem;
-		// letter-spacing: -0.5vw;
 	}
-   
-	@media #{$min-1200} {
-        // font-size: 160px;
-    }
 }
 
 %h3 {
@@ -121,53 +109,48 @@ $min-1600: "screen and (min-width: 1600px)";
     letter-spacing: 0px;
     line-height: 1;
     text-transform: initial;
+
     @media #{$min-800} {
         font-size: 1.8rem;
     }
-    @media #{$min-1000} {
-        // font-size: 2rem;
-    }
-    @media #{$min-1200} {
-        // font-size: 3rem;
-    }
 }
+
 %h4 {
     @extend %headingSerif;
-    // font-style: italic;
     color: inherit;
     font-size: 1rem;
     letter-spacing: 0.57px;
     line-height: 1rem;
 }
+
 %paragraph {
     @extend %text;
     color: inherit;
     font-size: 1rem;
-    // letter-spacing: -0.3px;
     line-height: $lh;
 }
+
 %small {
     @extend %headingBold;
-    // font-style: italic;
     color: inherit;
     font-size: 0.7rem;
     letter-spacing: 0;
     line-height: $lh;
     margin-bottom: $lh * 0.2;
+
     @media #{$min-1200} {
         font-weight: 200;
     }
 }
+
 %link {
+	// border-radius: 5px;
+    color: inherit;
     font-size: $fs;
     font-weight: 400;
-    // font-variation-settings: "wght" 400;
-    color: inherit;
-    transition: color 0.2s ease-in-out;
     position: relative;
     text-decoration: none;
-    overflow: hidden;
-	border-radius: 5px;
+    transition: color 0.2s ease-in-out;
 	overflow: visible;
 
     &:before,
@@ -218,19 +201,17 @@ $min-1600: "screen and (min-width: 1600px)";
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto 1fr auto;
-    // grid-column-gap: $lh;
+
     @media #{$min-1000} {
         grid-template-rows: repeat(8, 1fr);
     }
 }
 
-.has-focus {
-    outline: 3px solid $green;
-    // outline: 3px solid rgba($green, 0.5);
-    outline-offset: 3px;
-}
+// .has-focus {
+//     outline: 3px solid $green;
+//     outline-offset: 3px;
+// }
 
-// Visually hide an element 
 %visuallyhidden {
     margin: -1px;
     padding: 0;

@@ -55,15 +55,10 @@ h4 {
 
 .lede {
   line-height: 1.5;
-  // width: fit-content;
 }
 
 p {
   @extend %paragraph;
-
-  // &:not(:last-child) {
-  //   margin-bottom: $lh;
-  // }
 }
 
 small {
@@ -71,18 +66,11 @@ small {
 }
 
 ul {
-  list-style: none;
   display: flex;
   flex-direction: column;
   gap: 16px;
+  list-style: none;
   margin-top: 16px;
-}
-
-li {
-  // &:not(:last-child) {
-  //   margin-bottom: $lh * 0.5;
-  //   margin-bottom: 10px;
-  // }
 }
 
 a {
