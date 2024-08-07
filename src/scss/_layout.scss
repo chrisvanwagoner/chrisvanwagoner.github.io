@@ -1,7 +1,8 @@
 /* _layout.scss */
 
 body {
-    --section-spacing: 64px;
+    // --section-spacing: 64px;
+    --section-spacing: 128px;
     @media (min-height: 768px) and (min-width: 1000px) {
         --section-spacing: 256px;
     }
