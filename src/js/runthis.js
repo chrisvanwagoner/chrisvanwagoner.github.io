@@ -165,28 +165,28 @@ colorSchemeQueryList.addEventListener(setColorScheme, null);
 // 	'<span id="toggle-label" hidden>Switch to light mode</span>';
 // }
 
-// Adding custom focus class for "tab" keyboard users
-let focusable =  document.querySelectorAll('a, button');
-focusable.forEach((el) => {
-	el.addEventListener('mousedown', (event) => {
-		if (event.target.classList.contains('has-focus')) {
-			event.target.classList.remove('has-focus');
-		}
-	});
-	el.addEventListener('click', (event) => {
-		if (event.target.classList.contains('has-focus')) {
-			event.target.classList.remove('has-focus');
-		}
-	});
-	el.addEventListener('keyup', (event) => {
-		if (event.target.classList.contains('has-focus')) {
-			event.target.classList.remove('has-focus');
-		}
-		if (event.keyCode == '9') {
-			event.target.classList.add('has-focus');
-		}
-	});
-});
+// // Adding custom focus class for "tab" keyboard users
+// let focusable =  document.querySelectorAll('a, button');
+// focusable.forEach((el) => {
+// 	el.addEventListener('mousedown', (event) => {
+// 		if (event.target.classList.contains('has-focus')) {
+// 			event.target.classList.remove('has-focus');
+// 		}
+// 	});
+// 	el.addEventListener('click', (event) => {
+// 		if (event.target.classList.contains('has-focus')) {
+// 			event.target.classList.remove('has-focus');
+// 		}
+// 	});
+// 	el.addEventListener('keyup', (event) => {
+// 		if (event.target.classList.contains('has-focus')) {
+// 			event.target.classList.remove('has-focus');
+// 		}
+// 		if (event.keyCode == '9') {
+// 			event.target.classList.add('has-focus');
+// 		}
+// 	});
+// });
 
 // check for display mode cookie 
 // if set, add appropriate class
