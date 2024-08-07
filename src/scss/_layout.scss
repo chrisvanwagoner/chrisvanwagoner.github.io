@@ -3,11 +3,15 @@
 body {
     // --section-spacing: 64px;
     --section-spacing: 128px;
+    
     @media (min-height: 768px) and (min-width: 1000px) {
         --section-spacing: 256px;
     }
 
-    header,
+    header {
+        margin-bottom: 128px;
+    }
+
     section:not(:last-child) {
         margin-bottom: var(--section-spacing);
     }
