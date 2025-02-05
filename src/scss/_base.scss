@@ -75,4 +75,12 @@ ul {
 
 a {
   @extend %link;
+  // &:not(.skip-to-content) {
+  // }
+}
+
+img {
+  // height: auto;
+  // object-fit: contain;
+  max-width: 100%;
 }

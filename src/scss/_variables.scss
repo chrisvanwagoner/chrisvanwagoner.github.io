@@ -153,8 +153,8 @@ $min-1600: "screen and (min-width: 1600px)";
     transition: color 0.2s ease-in-out;
 	overflow: visible;
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
         content: "";
         position: absolute;
         bottom: 0;
@@ -163,12 +163,12 @@ $min-1600: "screen and (min-width: 1600px)";
         z-index: -1;
     }
 
-    &:before {
+    &::before {
         background-color: $link-underline;
         width: 100%;
     }
 
-    &:after {
+    &::after {
         background-color: var(--hover);
         transition: width 0.3s ease-in-out;
         width: 0;
