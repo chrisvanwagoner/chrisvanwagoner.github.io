@@ -20,11 +20,12 @@ html(lang='en')
 				h2.main__title Selected <br>Work
 				ul.main__clients
 					each client in clients
-						li(class='client client--' + `${client.class}`)
-							a.client__name(href=`${client.url}`,
-							target='_blank', 
-							rel='noopener') 
-								span #{client.name}
+						if client.enable == true
+							li(class='client client--' + `${client.class}`)
+								a.client__name(href=`${client.url}`,
+								target='_blank', 
+								rel='noopener') 
+									span #{client.name}
 			section.contact
 				h2.h3-like 
 					span Other Places  
