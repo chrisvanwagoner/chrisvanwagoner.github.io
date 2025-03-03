@@ -1,8 +1,13 @@
 /***********************************
   Components
 ***********************************/
-// .skip-to-content {
-//   @extend %visuallyhidden;
+.skip-to-content {
+  @extend %visuallyhidden;
+}
+// header {
+//   .skip-to-content {
+//     @extend %visuallyhidden;
+//   }
 // }
 
 nav {
@@ -42,6 +47,11 @@ nav {
   letter-spacing: 0;
   line-height: 1.2;
   transition: all 100ms ease-out;
+  // max-width: 70%;
+  
+  span {
+    text-wrap: balance;
+  }
   
   @media #{$min-800} {
     font-size: 4vw;
@@ -50,7 +60,7 @@ nav {
   }
 
   @media #{$min-1000} {
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
 
   &:before,
@@ -68,6 +78,23 @@ nav {
   span {
     overflow: hidden;
   }
+}
+
+.photo__link-text {
+  // @extend %visuallyhidden;
+}
+figure {
+  position: relative;
+  figcaption {
+    @extend %paragraph;
+    font-size: 0.6em;
+    text-align: center;
+    padding-top: 4px;
+  }
+
+  // .photo__link {
+  //   position: absolute;
+  // }
 }
 
 
