@@ -74,8 +74,8 @@ ul {
 }
 
 a {
-  @extend %link;
-  // &:not(.skip-to-content) {
+  // &:not(.photo__link) {
+    @extend %link;
   // }
 }
 
