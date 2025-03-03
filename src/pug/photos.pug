@@ -9,11 +9,14 @@ html(lang='en')
 		main
 			section.header
 				h1 Photos
-				.lede A few images I’ve taken that I like.
+				.lede A collection of images I’ve taken.
 			section.photo-grid  
 				each img in photoGalleryInfo
-					.photo 
+					figure.photo 
 						img(src=`${img.src}`,
 						srcset=`${img.src2x}` + ' 2x',
+						alt=`${img.alt}`,
 						loading='lazy')
+						figcaption #{img.caption}
+						a.photo__link(href=`${img.original}`) #{img.caption}
 		include templates/footer.pug
